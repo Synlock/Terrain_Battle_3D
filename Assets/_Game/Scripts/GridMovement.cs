@@ -21,7 +21,8 @@ public class GridMovement : MonoBehaviour
 
     FloatingJoystick joystick;
 
-    public event EventHandler OnStep;
+    public event EventHandler BeforeStep;
+    public event EventHandler AfterStep;
 
     [Header("AI Params")]
     [SerializeField] float initialTimer = 2f;
@@ -156,8 +157,9 @@ public class GridMovement : MonoBehaviour
         }
         if(dir.HasValue)
         {
-            OnStep?.Invoke(this, new StepEventArgs() { Direction = dir.Value });
+            BeforeStep?.Invoke(this, new StepEventArgs() { Direction = dir.Value });
             StartCoroutine(MovePlayer(dir.Value));
+            AfterStep?.Invoke(this, null);
         }
     }
     public class StepEventArgs : EventArgs

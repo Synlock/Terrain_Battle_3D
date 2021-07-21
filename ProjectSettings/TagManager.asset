@@ -12,6 +12,7 @@ TagManager:
   - Temp2
   - Temp3
   - Temp4
+  - PlayerTrail
   layers:
   - Default
   - TransparentFX

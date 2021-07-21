@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     public static GameObject[,] field = new GameObject[WIDTH, HEIGHT];
 
     [SerializeField] GameObject wall;
+    [SerializeField] Transform wallParent;
+
     [SerializeField] GameObject sea;
+    [SerializeField] Transform seaParent;
 
     void Start()
     {
@@ -30,8 +33,8 @@ public class GameManager : MonoBehaviour
             {
                 field[x, z] =
                     (x < 1 || x > WIDTH - 2 || z < 1 || z > HEIGHT - 2) ?
-                    Instantiate(wall, new Vector3(current_pos_x, 0f, current_pos_z), Quaternion.identity) :
-                    Instantiate(sea, new Vector3(current_pos_x, 0f, current_pos_z), Quaternion.identity);
+                    Instantiate(wall, new Vector3(current_pos_x, 0f, current_pos_z), Quaternion.identity, wallParent) :
+                    Instantiate(sea, new Vector3(current_pos_x, 0f, current_pos_z), Quaternion.identity, seaParent);
             }
         }
     }

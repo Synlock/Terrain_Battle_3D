@@ -10360,7 +10360,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 8359556174145078780, guid: e6b91d0f5b6fe42488cec0cea5589a10, type: 3}
+  wallParent: {fileID: 1795414445}
   sea: {fileID: 327544934221595684, guid: dc0ec83c7dbed43429907930e11a6125, type: 3}
+  seaParent: {fileID: 62426467}
 --- !u!4 &1615204343
 Transform:
   m_ObjectHideFlags: 0
@@ -14089,6 +14091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTag: PlayerLand
+  myTrailTag: PlayerTrail
   myColor: {r: 0.0058945417, g: 1, b: 0, a: 0}
 --- !u!4 &1384509466621013450 stripped
 Transform:
@@ -14196,6 +14199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTag: EnemyLand
+  myTrailTag: 
   myColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1001 &5867219711428957986
 PrefabInstance:
