@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 832352525566412400}
   - component: {fileID: 3761675642787280088}
   - component: {fileID: 3338939637336612855}
-  - component: {fileID: 2932226335685419372}
-  - component: {fileID: 2932226335685419362}
-  - component: {fileID: 2932226335685419365}
+  - component: {fileID: 4289564670628647329}
+  - component: {fileID: 4289564670628647330}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -115,7 +114,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2932226335685419372
+--- !u!114 &4289564670628647329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,53 +123,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 73966626396640643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f512789ad64fc74f861ca6c4b7eecbc, type: 3}
+  m_Script: {fileID: 11500000, guid: c546d204456b54449a28e592a428ee10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
-  timeToMove: 0.05
+--- !u!114 &4289564670628647330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73966626396640643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d9d6416e7a3f649ba7104f29586896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToMove: 0.01
   distance: 1
-  moves: 0
-  verticalCounter: 0
-  horizontalCounter: 0
-  goingForward: 0
-  goingBack: 0
-  goingLeft: 0
-  goingRight: 0
-  initialTimer: 2
---- !u!114 &2932226335685419362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73966626396640643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f8d8f7dfd87abc4a9ea9455990ab5be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLandParent: {fileID: 0}
-  enemyLandParent: {fileID: 0}
-  seaMaterial: {fileID: 0}
---- !u!114 &2932226335685419365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73966626396640643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7484dd0cb588e94c94028ba56a12f85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  otherPlayerFill: {fileID: 0}
-  initialCheckArea: []
-  checkArea1: []
-  checkArea2: []
-  wallParent: {fileID: 0}
-  seaParent: {fileID: 0}
-  wall: {fileID: 8359556174145078780, guid: e6b91d0f5b6fe42488cec0cea5589a10, type: 3}
-  sea: {fileID: 327544934221595684, guid: dc0ec83c7dbed43429907930e11a6125, type: 3}
-  isPlayer: 0
+  BlockReverse: 0
+  _inputMethod: 1
+  Up: 119
+  Down: 115
+  Left: 97
+  Right: 100
+  UpBound: Infinity
+  DownBound: -Infinity
+  LeftBound: -Infinity
+  RightBound: Infinity

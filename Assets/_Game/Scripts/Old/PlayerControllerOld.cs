@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerOld : MonoBehaviour
 {
     List<GameObject> currentlyFilling = new List<GameObject>();
 
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     string temp1;
     string temp2;
 
-    FloodFill floodFill;
+    FloodFillOld floodFill;
 
     MeshRenderer meshRenderer;
 
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     #region Unity Methods
     void Start()
     {
-        floodFill = GetComponent<FloodFill>();
+        floodFill = GetComponent<FloodFillOld>();
         meshRenderer = GetComponent<MeshRenderer>();
 
         if (floodFill.GetIsPlayer())
@@ -82,9 +82,9 @@ public class PlayerController : MonoBehaviour
             currentTemp = temp1;
         }
 
-        for (int z = 0; z < FloodFill.HEIGHT; z++)
+        for (int z = 0; z < FloodFillOld.HEIGHT; z++)
         {
-            for (int x = 0; x < FloodFill.WIDTH; x++)
+            for (int x = 0; x < FloodFillOld.WIDTH; x++)
             {
                 if (floodFill.field[x, z].tag == currentTemp || floodFill.field[x, z].tag == "Sea")
                 {

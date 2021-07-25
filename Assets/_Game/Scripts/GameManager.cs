@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public const int WIDTH = 28;
     public const int HEIGHT = 50;
 
-    public static GameObject[,] field = new GameObject[WIDTH, HEIGHT];
+    public static Tile[,] field = new Tile[WIDTH, HEIGHT];
+
+    public static int tilesCounter = 0;
+    int widthCounter;
 
     [SerializeField] GameObject wall;
     [SerializeField] Transform wallParent;
@@ -31,11 +32,49 @@ public class GameManager : MonoBehaviour
         {
             for (int x = 0; x < WIDTH; x++, current_pos_x++)
             {
-                field[x, z] =
-                    (x < 1 || x > WIDTH - 2 || z < 1 || z > HEIGHT - 2) ?
-                    Instantiate(wall, new Vector3(current_pos_x, 0f, current_pos_z), Quaternion.identity, wallParent) :
-                    Instantiate(sea, new Vector3(current_pos_x, 0f, current_pos_z), Quaternion.identity, seaParent);
+                if (x < 1 || x > WIDTH - 2 || z < 1 || z > HEIGHT - 2)
+                {
+                    field[x, z] = new Tile()
+                    {
+                        gameObject = Instantiate(wall, new Vector3(current_pos_x, 0f, current_pos_z), Quaternion.identity, wallParent),
+                        Owner = null,
+                        IsTrail = false,
+                        IsWall = true,
+                    };
+                    widthCounter++;
+                }
+                else
+                {
+                    field[x, z] = new Tile()
+                    {
+                        gameObject = Instantiate(sea, new Vector3(current_pos_x, 0f, current_pos_z), Quaternion.identity, seaParent),
+                        Owner = null,
+                        IsTrail = false,
+                        IsWall = false,
+                    };
+                }
+                tilesCounter = field.Length - widthCounter;
             }
         }
     }
+
+    #region Helpers
+    public static Tile GetFieldPosition(int x, int z)
+    {
+        return field[x, z];
+    }
+    public static Tile GetFieldPosition(double x, double z)
+    {
+        return GetFieldPosition((int)x, (int)z);
+    }
+    public static Tile GetFieldPosition(Vector3 pos)
+    {
+        return GetFieldPosition(pos.x, pos.z);
+    }
+    public static Tile GetFieldPosition(Transform t)
+    {
+        return GetFieldPosition(t.position);
+    }
+    #endregion
+
 }

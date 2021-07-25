@@ -1,153 +1,212 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(GridMovement))]
+[RequireComponent(typeof(MeshRenderer))]
 public class Player : MonoBehaviour
 {
-    //TODO: 1. create trail handler
-    //2. check if flood fill is needed
-    //3. get initial check area
-    //4. call FillList1()
-    [SerializeField] string myTag;
-    [SerializeField] string myTrailTag;
-    [SerializeField] Color myColor;
+    public Color myColor { get; private set; }
+    public float percent;
 
-    List<GameObject> initialCheckArea = new List<GameObject>();
+    List<Vector3> Trail = new List<Vector3>();
+    List<Color> tileColorsBeforeOwn = new List<Color>();
 
-    List<GameObject> trailObjs = new List<GameObject>();
+    List<Tile> tilesOwned = new List<Tile>();
+    [SerializeField] Transform tilesParent;
 
-    bool hitWall = false;
+
+    bool canFill = true;
 
     GridMovement gridMovement;
 
     void Start()
     {
         gridMovement = GetComponent<GridMovement>();
-        
+        gridMovement.DownBound = 0;
+        gridMovement.LeftBound = 0;
+        gridMovement.UpBound = GameManager.HEIGHT - 1;
+        gridMovement.RightBound = GameManager.WIDTH - 1;
+
+        myColor = GetComponent<MeshRenderer>().material.color;
+
         gridMovement.BeforeStep += BeforeStepHandler;
         gridMovement.AfterStep += AfterStepHandler;
     }
+    void Update()
+    {
+        //CalculatePercentOfTilesOwned();
+    }
+
 
     private void BeforeStepHandler(object sender, EventArgs e)
     {
-        GridMovement.StepEventArgs se = e as GridMovement.StepEventArgs;
+        Tile obj = GameManager.GetFieldPosition(transform);
 
-        GameObject nextObj;
+        if (obj.IsWall || obj.Owner == this)
+        {
+            canFill = true;
+            gridMovement.BlockReverse = false;
+            return;
+        }
 
-        if (se.Direction == Vector3.right)
-            nextObj = GameManager.field[(int)transform.position.x + 1, (int)transform.position.z];
-        else if (se.Direction == Vector3.left)
-            nextObj = GameManager.field[(int)transform.position.x - 1, (int)transform.position.z];
-        else if (se.Direction == Vector3.forward)
-            nextObj = GameManager.field[(int)transform.position.x, (int)transform.position.z + 1];
-        else
-            nextObj = GameManager.field[(int)transform.position.x, (int)transform.position.z - 1];
+        if (!canFill) return;
 
-        if (nextObj.CompareTag("Wall"))
-            hitWall = true;
+        tileColorsBeforeOwn.Add(GameManager.GetFieldPosition(transform.position).color);
 
-        if (nextObj.CompareTag("Wall") || nextObj.CompareTag(myTag)) { return; }
+        obj.Owner = this;
+        obj.IsTrail = true;
+        obj.tilePos = new Vector3(obj.gameObject.transform.position.x, -1f, obj.gameObject.transform.position.z);
+        obj.gameObject.transform.parent = tilesParent;
 
-        trailObjs.Add(nextObj);
-        nextObj.GetComponent<MeshRenderer>().material.color = myColor;
-        nextObj.tag = myTag;
+        Trail.Add(transform.position);
     }
-
+    
     private void AfterStepHandler(object sender, EventArgs e)
-    {
-        //GridMovement.StepEventArgs se = e as GridMovement.StepEventArgs;
+    { 
+        Tile obj = GameManager.GetFieldPosition(transform);
 
-        if (initialCheckArea.Count < 1)
+        if (obj.Owner == this && obj.IsTrail)
+            SelfCollisionHandler();
+
+        if (obj.IsTrail)
+            OtherCollisionHandler(obj);
+
+        if (!(obj.IsWall || obj.Owner == this))
         {
-            int x = (int)transform.position.x;
-            int z = (int)transform.position.z;
-
-            if (!(GameManager.field[(int)trailObjs[0].transform.position.x + 1, (int)trailObjs[0].transform.position.z].CompareTag("Wall") ||
-                    GameManager.field[(int)trailObjs[0].transform.position.x + 1, (int)trailObjs[0].transform.position.z].CompareTag(myTag)))
-            {
-                initialCheckArea.Add(GameManager.field[x + 1, z]);
-                initialCheckArea.Add(GameManager.field[x - 1, z]);
-            }
-            else if (!(GameManager.field[(int)trailObjs[0].transform.position.x, (int)trailObjs[0].transform.position.z + 1].CompareTag("Wall") ||
-                        GameManager.field[(int)trailObjs[0].transform.position.x, (int)trailObjs[0].transform.position.z + 1].CompareTag(myTag)))
-            {
-                initialCheckArea.Add(GameManager.field[x, z + 1]);
-                initialCheckArea.Add(GameManager.field[x, z - 1]);
-            }
+            gridMovement.BlockReverse = true;
+            return;
         }
+        if (Trail.Count == 0) return;
+        
+        if (!canFill) return;
+        // flood fill
+        (Vector2Int, Vector2Int) InitialTiles = GetInitialTiles();
+        int size1 = CheckAreaSize(InitialTiles.Item1);
+        int size2 = CheckAreaSize(InitialTiles.Item2);
 
-        /*if (se.Direction == Vector3.right)
-            nextObj = GameManager.field[(int)transform.position.x + 1, (int)transform.position.z];
-        else if (se.Direction == Vector3.left)
-            nextObj = GameManager.field[(int)transform.position.x - 1, (int)transform.position.z];
-        else if (se.Direction == Vector3.forward)
-            nextObj = GameManager.field[(int)transform.position.x, (int)transform.position.z + 1];
+        if (size1 < size2)
+            FillSmallArea(InitialTiles.Item1);
         else
-            nextObj = GameManager.field[(int)transform.position.x, (int)transform.position.z - 1];*/
+            FillSmallArea(InitialTiles.Item2);
 
-
-        if (!(GameManager.field[(int)transform.position.x, (int)transform.position.z].CompareTag("Wall") || 
-                GameManager.field[(int)transform.position.x, (int)transform.position.z].CompareTag(myTag))) { return; }
-
-        int fill0 = CheckAreaSize((int)initialCheckArea[0].transform.position.x, (int)initialCheckArea[0].transform.position.z);
-        int fill1 = CheckAreaSize((int)initialCheckArea[1].transform.position.x, (int)initialCheckArea[1].transform.position.z);
-
-        if (fill0 < fill1)
-        {
-            FillSmallArea((int)initialCheckArea[0].transform.position.x, (int)initialCheckArea[0].transform.position.z);
-        }
-        else
-        {
-            FillSmallArea((int)initialCheckArea[1].transform.position.x, (int)initialCheckArea[1].transform.position.z);
-        }
-        initialCheckArea.Clear();
-        for (int i = 0; i < trailObjs.Count; i++)
-        {
-            trailObjs[i].tag = myTag;
-        }
+        OccupyTrail();
+        tileColorsBeforeOwn.Clear();
+        gridMovement.BlockReverse = false;
+        CalculatePercentOfTilesOwned();
     }
 
-    List<GameObject> checkArea1 = new List<GameObject>();
-    GameObject[,] fieldCopy1 = new GameObject[GameManager.WIDTH, GameManager.HEIGHT];
-    public int CheckAreaSize(int x, int z)
+    void SelfCollisionHandler()
     {
-        Array.Copy(GameManager.field, fieldCopy1, fieldCopy1.Length);
-
-        FloodFill(x, z);
-
-        int count = checkArea1.Count;
-        checkArea1.Clear();
-
-        return count;
-    }
-    void FloodFill(int x, int z)
-    {
-        if (fieldCopy1[x, z].CompareTag("Wall") || fieldCopy1[x, z].CompareTag(myTag)) { return; }
-        if (hitWall)
+        foreach (Vector3 v in Trail)
         {
-            checkArea1.Add(fieldCopy1[x, z]);
+            GameManager.GetFieldPosition(v).IsTrail = false;
+            GameManager.GetFieldPosition(v).Owner = null;
+            for (int i = 0; i < tileColorsBeforeOwn.Count; i++)
+            {
+                GameManager.GetFieldPosition(Trail[i]).color = tileColorsBeforeOwn[i];
 
-            FloodFill(x + 1, z);
-            FloodFill(x - 1, z);
-            FloodFill(x, z + 1);
-            FloodFill(x, z - 1);
+                Vector3 startTilePos = GameManager.GetFieldPosition(Trail[i]).tilePos;
+                GameManager.GetFieldPosition(Trail[i]).tilePos = new Vector3(startTilePos.x, 0f, startTilePos.z);
+            }
+        }
+        canFill = false;
+        Trail.Clear();
+        tileColorsBeforeOwn.Clear();
+    }
+    void OtherCollisionHandler(Tile obj)
+    {
+        if (obj.Owner == this) return;
+
+        Player other = obj.Owner;
+
+        foreach (Vector3 v in other.Trail)
+        {
+            GameManager.GetFieldPosition(v).IsTrail = false;
+            GameManager.GetFieldPosition(v).Owner = null;
+            for (int i = 0; i < other.tileColorsBeforeOwn.Count; i++)
+            {
+                GameManager.GetFieldPosition(other.Trail[i]).color = other.tileColorsBeforeOwn[i];
+            }
+        }
+        other.canFill = false;
+        other.Trail.Clear();
+        other.tileColorsBeforeOwn.Clear();
+    }
+    void StealTerrainHandler(Tile t)
+    {
+        if (t.Owner != null && t.Owner != this)
+            GameManager.GetFieldPosition(t.tilePos).Owner.tilesOwned.Remove(t);
+    }
+    void CalculatePercentOfTilesOwned()
+    {
+        percent = tilesOwned.Count * 100 / GameManager.tilesCounter;
+        print(percent);
+    }
+
+    void OccupyTrail()
+    {
+        foreach (Vector3 v in Trail)
+        {
+            Vector3 tilePos = GameManager.GetFieldPosition(v).tilePos;
+            GameManager.GetFieldPosition(v).tilePos = new Vector3(tilePos.x, 0f, tilePos.z);
+
+            GameManager.GetFieldPosition(v).IsTrail = false;
+            tilesOwned.Add(GameManager.GetFieldPosition(v));
+        }
+        Trail.Clear();
+    }
+
+    (Vector2Int, Vector2Int) GetInitialTiles()
+    {
+        Vector3 first = Trail[0];
+
+        // This needs to be much, much more complicated.
+        if (!(GameManager.GetFieldPosition(first.x + 1, first.z).IsWall ||
+            GameManager.GetFieldPosition(first.x + 1, first.z).Owner == this))
+        {
+            return (new Vector2Int((int)first.x + 1, (int)first.z),
+                new Vector2Int((int)first.x - 1, (int)first.z));
+        }
+        else if (!(GameManager.GetFieldPosition(first.x, first.z + 1).IsWall ||
+                    GameManager.GetFieldPosition(first.x, first.z - 1).Owner == this))
+        {
+            return (new Vector2Int((int)first.x, (int)first.z + 1),
+                new Vector2Int((int)first.x, (int)first.z - 1));
         }
 
-        return;
+        return (Vector2Int.zero, Vector2Int.zero);
     }
-    void FillSmallArea(int x, int z)
+
+    bool[,] GetFieldCopy()
     {
-        if (GameManager.field[x, z].CompareTag("Wall") || GameManager.field[x, z].CompareTag(myTag)) { return; }
+        return GameManager.field.Select(t => t.IsWall || t.Owner == this);
+    }
 
-        GameManager.field[x, z].GetComponent<MeshRenderer>().material.color = myColor;
-        GameManager.field[x, z].tag = myTag;
+    private void MarkBool (ref bool b)
+    {
+        b = true;
+    }
+    public int CheckAreaSize(Vector2Int v)
+    {
+        FloodFill<bool> ff = new FloodFill<bool>(GetFieldCopy(), b => b, MarkBool);
+        return ff.Start(v.x, v.y);
+    }
 
-        FloodFill(x + 1, z);
-        FloodFill(x - 1, z);
-        FloodFill(x, z + 1);
-        FloodFill(x, z - 1);
-
-        return;
+    private void MarkTile(ref Tile t)
+    {
+        StealTerrainHandler(t);
+        
+        t.Owner = this;
+        t.IsTrail = false;
+        t.tilePos = new Vector3(t.gameObject.transform.position.x, 0f, t.gameObject.transform.position.z);
+        tilesOwned.Add(t);
+        t.gameObject.transform.parent = tilesParent;
+    }
+    void FillSmallArea(Vector2Int v)
+    {
+        FloodFill<Tile> ff = new FloodFill<Tile>(GameManager.field,
+            tile => tile.IsWall || tile.Owner == this, MarkTile);
+        ff.Start(v.x, v.y);
     }
 }
