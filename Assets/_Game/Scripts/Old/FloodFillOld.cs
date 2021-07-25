@@ -17,7 +17,7 @@ public class FloodFillOld : MonoBehaviour
     public List<GameObject> checkArea1 = new List<GameObject>();
     public List<GameObject> checkArea2 = new List<GameObject>();
 
-    string landTag;
+    //string landTag;
     string otherPlayerLandTag;
     string temp1;
     string temp2;
@@ -43,14 +43,14 @@ public class FloodFillOld : MonoBehaviour
 
         if (isPlayer)
         {
-            landTag = "PlayerLand";
+            //landTag = "PlayerLand";
             otherPlayerLandTag = "EnemyLand";
             temp1 = "Temp1";
             temp2 = "Temp2";
         }
         else
         {
-            landTag = "EnemyLand";
+            //landTag = "EnemyLand";
             otherPlayerLandTag = "PlayerLand";
             temp1 = "Temp3";
             temp2 = "Temp4";

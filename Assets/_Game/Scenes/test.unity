@@ -14554,6 +14554,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1607704085}
     - target: {fileID: 1384509466621013446, guid: ff2fdb71b3b017d4ab0dcc5ee9445270, type: 3}
+      propertyPath: timeToMove
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384509466621013446, guid: ff2fdb71b3b017d4ab0dcc5ee9445270, type: 3}
       propertyPath: _inputMethod
       value: 2
       objectReference: {fileID: 0}

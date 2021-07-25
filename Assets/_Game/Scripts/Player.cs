@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     GridMovement gridMovement;
 
+    #region Unity Methods
     void Start()
     {
         gridMovement = GetComponent<GridMovement>();
@@ -35,11 +36,12 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        //CalculatePercentOfTilesOwned();
+        CalculatePercentOfTilesOwned();
     }
+    #endregion
 
-
-    private void BeforeStepHandler(object sender, EventArgs e)
+    #region Before/After Step Handlers
+    void BeforeStepHandler(object sender, EventArgs e)
     {
         Tile obj = GameManager.GetFieldPosition(transform);
 
@@ -61,8 +63,7 @@ public class Player : MonoBehaviour
 
         Trail.Add(transform.position);
     }
-    
-    private void AfterStepHandler(object sender, EventArgs e)
+    void AfterStepHandler(object sender, EventArgs e)
     { 
         Tile obj = GameManager.GetFieldPosition(transform);
 
@@ -93,9 +94,10 @@ public class Player : MonoBehaviour
         OccupyTrail();
         tileColorsBeforeOwn.Clear();
         gridMovement.BlockReverse = false;
-        CalculatePercentOfTilesOwned();
     }
+    #endregion
 
+    #region Trail Collision Handlers
     void SelfCollisionHandler()
     {
         foreach (Vector3 v in Trail)
@@ -133,17 +135,31 @@ public class Player : MonoBehaviour
         other.Trail.Clear();
         other.tileColorsBeforeOwn.Clear();
     }
+    #endregion
+
+    #region Tile Percentage Handlers
     void StealTerrainHandler(Tile t)
     {
         if (t.Owner != null && t.Owner != this)
-            GameManager.GetFieldPosition(t.tilePos).Owner.tilesOwned.Remove(t);
+        {
+            Player other = GameManager.GetFieldPosition(t.tilePos).Owner;
+            other.tilesOwned.Remove(t);
+        }
     }
     void CalculatePercentOfTilesOwned()
     {
         percent = tilesOwned.Count * 100 / GameManager.tilesCounter;
-        print(percent);
-    }
 
+        //TODO: fix temporary fix for the extra 3 percent that is calculated  
+        if (tilesParent.childCount < 1)
+        {
+            percent = 0;
+            tilesOwned.Clear();
+        }
+    }
+    #endregion
+
+    #region Flood Fill Handlers
     void OccupyTrail()
     {
         foreach (Vector3 v in Trail)
@@ -151,8 +167,8 @@ public class Player : MonoBehaviour
             Vector3 tilePos = GameManager.GetFieldPosition(v).tilePos;
             GameManager.GetFieldPosition(v).tilePos = new Vector3(tilePos.x, 0f, tilePos.z);
 
-            GameManager.GetFieldPosition(v).IsTrail = false;
             tilesOwned.Add(GameManager.GetFieldPosition(v));
+            GameManager.GetFieldPosition(v).IsTrail = false;
         }
         Trail.Clear();
     }
@@ -177,12 +193,10 @@ public class Player : MonoBehaviour
 
         return (Vector2Int.zero, Vector2Int.zero);
     }
-
     bool[,] GetFieldCopy()
     {
         return GameManager.field.Select(t => t.IsWall || t.Owner == this);
     }
-
     private void MarkBool (ref bool b)
     {
         b = true;
@@ -192,7 +206,6 @@ public class Player : MonoBehaviour
         FloodFill<bool> ff = new FloodFill<bool>(GetFieldCopy(), b => b, MarkBool);
         return ff.Start(v.x, v.y);
     }
-
     private void MarkTile(ref Tile t)
     {
         StealTerrainHandler(t);
@@ -201,6 +214,7 @@ public class Player : MonoBehaviour
         t.IsTrail = false;
         t.tilePos = new Vector3(t.gameObject.transform.position.x, 0f, t.gameObject.transform.position.z);
         tilesOwned.Add(t);
+
         t.gameObject.transform.parent = tilesParent;
     }
     void FillSmallArea(Vector2Int v)
@@ -209,4 +223,6 @@ public class Player : MonoBehaviour
             tile => tile.IsWall || tile.Owner == this, MarkTile);
         ff.Start(v.x, v.y);
     }
+    #endregion
+
 }
