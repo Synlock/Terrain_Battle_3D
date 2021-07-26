@@ -16,6 +16,7 @@ public class Tile
                 color = _owner.myColor;
         }
     }
+
     public bool IsTrail;
     public bool IsWall;
 

@@ -6,6 +6,10 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class Player : MonoBehaviour
 {
+    //TODO: when trying to fill this players island that is not connected to a wall, the entire field will fill with this color
+    // during the flood fill check of both points - check to see if any two points overlap - need to create a list of each flood fill
+    // if any two points overlap, stop filling at tile.Owner != this or tile.Owner == null
+    #region Member Variables
     public Color myColor { get; private set; }
     public float percent;
 
@@ -15,10 +19,10 @@ public class Player : MonoBehaviour
     List<Tile> tilesOwned = new List<Tile>();
     [SerializeField] Transform tilesParent;
 
-
     bool canFill = true;
 
     GridMovement gridMovement;
+    #endregion
 
     #region Unity Methods
     void Start()
@@ -52,6 +56,8 @@ public class Player : MonoBehaviour
             return;
         }
 
+        FilledOverHandler();
+
         if (!canFill) return;
 
         tileColorsBeforeOwn.Add(GameManager.GetFieldPosition(transform.position).color);
@@ -64,7 +70,7 @@ public class Player : MonoBehaviour
         Trail.Add(transform.position);
     }
     void AfterStepHandler(object sender, EventArgs e)
-    { 
+    {
         Tile obj = GameManager.GetFieldPosition(transform);
 
         if (obj.Owner == this && obj.IsTrail)
@@ -75,12 +81,16 @@ public class Player : MonoBehaviour
 
         if (!(obj.IsWall || obj.Owner == this))
         {
-            gridMovement.BlockReverse = true;
+            if (canFill)
+                gridMovement.BlockReverse = true;
+            else gridMovement.BlockReverse = false;
+
             return;
         }
         if (Trail.Count == 0) return;
-        
+
         if (!canFill) return;
+
         // flood fill
         (Vector2Int, Vector2Int) InitialTiles = GetInitialTiles();
         int size1 = CheckAreaSize(InitialTiles.Item1);
@@ -92,8 +102,6 @@ public class Player : MonoBehaviour
             FillSmallArea(InitialTiles.Item2);
 
         OccupyTrail();
-        tileColorsBeforeOwn.Clear();
-        gridMovement.BlockReverse = false;
     }
     #endregion
 
@@ -129,11 +137,30 @@ public class Player : MonoBehaviour
             for (int i = 0; i < other.tileColorsBeforeOwn.Count; i++)
             {
                 GameManager.GetFieldPosition(other.Trail[i]).color = other.tileColorsBeforeOwn[i];
+
+                Vector3 trailTilePos = GameManager.GetFieldPosition(other.Trail[i]).tilePos;
+                GameManager.GetFieldPosition(other.Trail[i]).tilePos = new Vector3(trailTilePos.x, 0f, trailTilePos.z);
             }
         }
         other.canFill = false;
         other.Trail.Clear();
         other.tileColorsBeforeOwn.Clear();
+        other.gridMovement.BlockReverse = false;
+    }
+    void FilledOverHandler()
+    {
+        if (Trail.Count > 0)
+        {
+            for (int i = 0; i < Trail.Count; i++)
+            {
+                if (GameManager.GetFieldPosition(Trail[i]).Owner != this)
+                {
+                    tileColorsBeforeOwn.Clear();
+                    Trail.Clear();
+                    canFill = false;
+                }
+            }
+        }
     }
     #endregion
 
@@ -171,33 +198,59 @@ public class Player : MonoBehaviour
             GameManager.GetFieldPosition(v).IsTrail = false;
         }
         Trail.Clear();
+        tileColorsBeforeOwn.Clear();
+
+        gridMovement.BlockReverse = false;
     }
 
     (Vector2Int, Vector2Int) GetInitialTiles()
     {
-        Vector3 first = Trail[0];
-
-        // This needs to be much, much more complicated.
-        if (!(GameManager.GetFieldPosition(first.x + 1, first.z).IsWall ||
-            GameManager.GetFieldPosition(first.x + 1, first.z).Owner == this))
+        bool readyToFill = false;
+        for (int i = 0; i < Trail.Count; i++)
         {
-            return (new Vector2Int((int)first.x + 1, (int)first.z),
-                new Vector2Int((int)first.x - 1, (int)first.z));
-        }
-        else if (!(GameManager.GetFieldPosition(first.x, first.z + 1).IsWall ||
-                    GameManager.GetFieldPosition(first.x, first.z - 1).Owner == this))
-        {
-            return (new Vector2Int((int)first.x, (int)first.z + 1),
-                new Vector2Int((int)first.x, (int)first.z - 1));
-        }
+            //loop through trail list to find fill points
+            Vector3 first = new Vector3();
+            if (!(GameManager.GetFieldPosition(Trail[i].x + 1, Trail[i].z).IsWall ||
+                GameManager.GetFieldPosition(Trail[i].x + 1, Trail[i].z).Owner == this) &&
+                !(GameManager.GetFieldPosition(Trail[i].x - 1, Trail[i].z).IsWall ||
+                GameManager.GetFieldPosition(Trail[i].x - 1, Trail[i].z).Owner == this))
+            {
+                first = Trail[i];
+                readyToFill = true;
+            }
+            else if (!(GameManager.GetFieldPosition(Trail[i].x, Trail[i].z + 1).IsWall ||
+                GameManager.GetFieldPosition(Trail[i].x, Trail[i].z + 1).Owner == this) &&
+                !(GameManager.GetFieldPosition(Trail[i].x, Trail[i].z - 1).IsWall ||
+                GameManager.GetFieldPosition(Trail[i].x, Trail[i].z - 1).Owner == this))
+            {
+                first = Trail[i];
+                readyToFill = true;
+            }
 
+            if (readyToFill)
+            {
+                // This needs to be much, much more complicated.
+                if (!(GameManager.GetFieldPosition(first.x + 1, first.z).IsWall ||
+                    GameManager.GetFieldPosition(first.x + 1, first.z).Owner == this))
+                {
+                    return (new Vector2Int((int)first.x + 1, (int)first.z),
+                        new Vector2Int((int)first.x - 1, (int)first.z));
+                }
+                else if (!(GameManager.GetFieldPosition(first.x, first.z + 1).IsWall ||
+                            GameManager.GetFieldPosition(first.x, first.z - 1).Owner == this))
+                {
+                    return (new Vector2Int((int)first.x, (int)first.z + 1),
+                        new Vector2Int((int)first.x, (int)first.z - 1));
+                }
+            }
+        }
         return (Vector2Int.zero, Vector2Int.zero);
     }
     bool[,] GetFieldCopy()
     {
         return GameManager.field.Select(t => t.IsWall || t.Owner == this);
     }
-    private void MarkBool (ref bool b)
+    private void MarkBool(ref bool b)
     {
         b = true;
     }
@@ -209,13 +262,13 @@ public class Player : MonoBehaviour
     private void MarkTile(ref Tile t)
     {
         StealTerrainHandler(t);
-        
+
         t.Owner = this;
         t.IsTrail = false;
         t.tilePos = new Vector3(t.gameObject.transform.position.x, 0f, t.gameObject.transform.position.z);
         tilesOwned.Add(t);
-
         t.gameObject.transform.parent = tilesParent;
+
     }
     void FillSmallArea(Vector2Int v)
     {
@@ -224,5 +277,4 @@ public class Player : MonoBehaviour
         ff.Start(v.x, v.y);
     }
     #endregion
-
 }

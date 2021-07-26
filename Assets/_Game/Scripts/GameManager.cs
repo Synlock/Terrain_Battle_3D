@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static Tile[,] field = new Tile[WIDTH, HEIGHT];
 
     public static int tilesCounter = 0;
-    int widthCounter;
+    int wallCounter;
 
     [SerializeField] GameObject wall;
     [SerializeField] Transform wallParent;
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
                         IsTrail = false,
                         IsWall = true,
                     };
-                    widthCounter++;
+                    wallCounter++;
                 }
                 else
                 {
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
                         IsWall = false,
                     };
                 }
-                tilesCounter = field.Length - widthCounter;
+                tilesCounter = field.Length - wallCounter;
             }
         }
     }
