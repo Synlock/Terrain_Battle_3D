@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1572270565180625758}
   - component: {fileID: 1384509466621013445}
   - component: {fileID: 1384509466621013446}
+  - component: {fileID: 1384509466621013447}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -126,6 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c546d204456b54449a28e592a428ee10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  percent: 0
+  tilesParent: {fileID: 0}
 --- !u!114 &1384509466621013446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,11 +145,26 @@ MonoBehaviour:
   distance: 1
   BlockReverse: 0
   _inputMethod: 0
-  Up: 0
-  Down: 0
-  Left: 0
-  Right: 0
+  Up: 273
+  Down: 274
+  Left: 276
+  Right: 275
   UpBound: Infinity
   DownBound: -Infinity
   LeftBound: -Infinity
   RightBound: Infinity
+--- !u!114 &1384509466621013447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4215738783394715946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1da605f29d7b54e9e0e2164e20f070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentageSlider: {fileID: 0}
+  fill: {fileID: 0}
+  winPanel: {fileID: 0}
