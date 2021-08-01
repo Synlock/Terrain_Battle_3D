@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         CalculatePercentOfTilesOwned();
-        FilledOverNotMovingHandler();
+        FilledOverNotMovingHandler();        
     }
     #endregion
 
@@ -64,7 +64,6 @@ public class Player : MonoBehaviour
 
         FilledOverMovingHandler();
 
-
         if (!canFill) return;
 
         tileColorsBeforeOwn.Add(GameManager.GetFieldPosition(transform.position).color);
@@ -80,6 +79,7 @@ public class Player : MonoBehaviour
     {
         Tile obj = GameManager.GetFieldPosition(transform);
 
+
         if (obj.Owner == this && obj.IsTrail)
             SelfCollisionHandler();
 
@@ -94,9 +94,9 @@ public class Player : MonoBehaviour
 
             return;
         }
-        if (Trail.Count == 0) return;
+        else gridMovement.moves = 0;
 
-        if (!canFill) return;
+        if (Trail.Count == 0 || !canFill) return;
 
         // flood fill
         (Vector2Int, Vector2Int) InitialTiles = GetInitialTiles();
@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
     }
     #endregion
 
-    #region Trail Collision Handlers
+    #region Collision Handlers
     void SelfCollisionHandler()
     {
         foreach (Vector3 v in Trail)
@@ -174,7 +174,8 @@ public class Player : MonoBehaviour
         if (onMyLand &&
             GameManager.GetFieldPosition(transform).Owner != this &&
             GameManager.GetFieldPosition(transform).Owner != null &&
-            !GameManager.GetFieldPosition(transform).IsWall)
+            !GameManager.GetFieldPosition(transform).IsWall &&
+            gridMovement.moves < 1)
             canFill = false;
     }
     #endregion

@@ -20,6 +20,8 @@ public class GridMovement : MonoBehaviour
     Vector3 targetPos;
     Vector3 lastMove = Vector3.zero;
 
+    public int moves;
+
     [SerializeField] public bool BlockReverse = false;
 
     [SerializeField] InputMethod _inputMethod;
@@ -133,7 +135,7 @@ public class GridMovement : MonoBehaviour
     IEnumerator MoveObject(Vector3 direction)
     {
         isMoving = true;
-
+        moves++;
         float elapsedTime = 0f;
 
         originalPos = transform.position;
