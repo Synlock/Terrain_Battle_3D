@@ -1,0 +1,124 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.4f1 (0abb6314276a) revision 703331'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1110; Version 2009; 64bit' Language: 'en' Physical Memory: 16238 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Unity\Projects\2020.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/tomer/OneDrive/Documents/GitHub/Terrain_Battle_3D
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+49410
+Successfully changed project path to: C:/Users/tomer/OneDrive/Documents/GitHub/Terrain_Battle_3D
+C:/Users/tomer/OneDrive/Documents/GitHub/Terrain_Battle_3D
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 47.96 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.4f1 (0abb6314276a)
+[Subsystems] Discovering subsystems at path D:/Unity/Projects/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/tomer/OneDrive/Documents/GitHub/Terrain_Battle_3D/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c8c)
+    Vendor:   
+    VRAM:     4021 MB
+    Driver:   27.21.14.5709
+Initialize mono
+Mono path[0] = 'D:/Unity/Projects/2020.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Projects/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/Projects/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56332
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Projects/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001789 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 45.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.480 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006243 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.634 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.6 MB.
+System memory in use after: 57.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1582.
+Total: 1.887800 ms (FindLiveObjects: 0.204900 ms CreateObjectMapping: 0.043800 ms MarkObjects: 1.563000 ms  DeleteObjects: 0.074600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/_Game/UI/Flags/US Flag.png
+  artifactKey: Guid(2eafbeb38c0ca3945b53b1581f7899c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/UI/Flags/US Flag.png using Guid(2eafbeb38c0ca3945b53b1581f7899c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0142a76d97121f3077048fb6517e00cd') in 0.258300 seconds
+  Import took 0.265330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.173910 seconds.
+  path: Assets/_Game/UI/Flags/Vietnam.png
+  artifactKey: Guid(ab9aee22fa723dc469f6d3bf48b522b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/UI/Flags/Vietnam.png using Guid(ab9aee22fa723dc469f6d3bf48b522b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e991f1adfcc33d7e100cb6e36753d6cb') in 0.040146 seconds
+  Import took 0.045022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.382107 seconds.
+  path: Assets/_Game/UI/Flags/Vietnam.png
+  artifactKey: Guid(ab9aee22fa723dc469f6d3bf48b522b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/UI/Flags/Vietnam.png using Guid(ab9aee22fa723dc469f6d3bf48b522b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6ce09326314ecbdcebb9071d27e7c8f') in 0.198571 seconds
+  Import took 0.201733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.658229 seconds.
+  path: Assets/_Game/UI/Flags/US Flag.png
+  artifactKey: Guid(2eafbeb38c0ca3945b53b1581f7899c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/UI/Flags/US Flag.png using Guid(2eafbeb38c0ca3945b53b1581f7899c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b580c3e2bfe9cb7b83855bfe148fcd') in 0.033636 seconds
+  Import took 0.043524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.876797 seconds.
+  path: Assets/_Game/UI/Flags/ycog74rgi.gif
+  artifactKey: Guid(4e2e523d78b46ea42bb4a262f307f057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/UI/Flags/ycog74rgi.gif using Guid(4e2e523d78b46ea42bb4a262f307f057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1230a7915e48d631ab4d34ef759a328a') in 0.050655 seconds
+  Import took 0.055503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 73.780315 seconds.
+  path: Assets/_Game/UI/Flags/RcAR4LyXi.png
+  artifactKey: Guid(122a4d0e6975689469197d2b68faa337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/UI/Flags/RcAR4LyXi.png using Guid(122a4d0e6975689469197d2b68faa337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b92290ce4ec4007f75ed6f727fcb5b51') in 0.053986 seconds
+  Import took 0.066593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.510732 seconds.
+  path: Assets/_Game/UI/Flags/RcAR4LyXi.png
+  artifactKey: Guid(122a4d0e6975689469197d2b68faa337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/UI/Flags/RcAR4LyXi.png using Guid(122a4d0e6975689469197d2b68faa337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a22ef3256c9723f173b8f6ab5cf70db0') in 0.036789 seconds
+  Import took 0.039816 seconds .
+
