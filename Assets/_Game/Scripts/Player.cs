@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     [SerializeField] Transform tilesParent;
 
     bool canFill = true;
+    bool onMyLand = false;
 
     GridMovement gridMovement;
     #endregion
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         CalculatePercentOfTilesOwned();
+        FilledOverNotMovingHandler();
     }
     #endregion
 
@@ -49,6 +51,10 @@ public class Player : MonoBehaviour
     {
         Tile obj = GameManager.GetFieldPosition(transform);
 
+        if (obj.Owner != this)
+            onMyLand = false;
+        else onMyLand = true;
+
         if (obj.IsWall || obj.Owner == this)
         {
             canFill = true;
@@ -56,7 +62,8 @@ public class Player : MonoBehaviour
             return;
         }
 
-        FilledOverHandler();
+        FilledOverMovingHandler();
+
 
         if (!canFill) return;
 
@@ -147,7 +154,7 @@ public class Player : MonoBehaviour
         other.tileColorsBeforeOwn.Clear();
         other.gridMovement.BlockReverse = false;
     }
-    void FilledOverHandler()
+    void FilledOverMovingHandler()
     {
         if (Trail.Count > 0)
         {
@@ -161,6 +168,14 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }
+    void FilledOverNotMovingHandler()
+    {
+        if (onMyLand &&
+            GameManager.GetFieldPosition(transform).Owner != this &&
+            GameManager.GetFieldPosition(transform).Owner != null &&
+            !GameManager.GetFieldPosition(transform).IsWall)
+            canFill = false;
     }
     #endregion
 
