@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToMove: 0.01
   distance: 1
+  moves: 0
   BlockReverse: 0
   _inputMethod: 1
   Up: 119
