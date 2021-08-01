@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
     public const int WIDTH = 28;
     public const int HEIGHT = 50;
 
+    public static bool isGameOver = false;
+
     public static Tile[,] field = new Tile[WIDTH, HEIGHT];
 
     public static int tilesCounter = 0;

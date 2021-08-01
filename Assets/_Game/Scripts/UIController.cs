@@ -31,6 +31,8 @@ public class UIController : MonoBehaviour
     {
         if(player.percent >= 80f)
         {
+            GameManager.isGameOver = true;
+
             if(winPanel != null)
                 winPanel.SetActive(true);
         }
