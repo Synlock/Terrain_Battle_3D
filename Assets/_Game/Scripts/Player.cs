@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     List<Vector3> Trail = new List<Vector3>();
     List<Color> tileColorsBeforeOwn = new List<Color>();
 
-    List<Tile> tilesOwned = new List<Tile>();
     [SerializeField] Transform tilesParent;
 
     bool canFill = true;
@@ -181,24 +180,9 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Tile Percentage Handlers
-    void StealTerrainHandler(Tile t)
-    {
-        if (t.Owner != null && t.Owner != this)
-        {
-            Player other = GameManager.GetFieldPosition(t.tilePos).Owner;
-            other.tilesOwned.Remove(t);
-        }
-    }
     void CalculatePercentOfTilesOwned()
     {
-        percent = tilesOwned.Count * 100 / GameManager.tilesCounter;
-
-        //TODO: fix temporary fix for the extra 3 percent that is calculated  
-        if (tilesParent.childCount < 1)
-        {
-            percent = 0;
-            tilesOwned.Clear();
-        }
+        percent = tilesParent.childCount * 100 / GameManager.tilesCounter;
     }
     #endregion
 
@@ -209,8 +193,6 @@ public class Player : MonoBehaviour
         {
             Vector3 tilePos = GameManager.GetFieldPosition(v).tilePos;
             GameManager.GetFieldPosition(v).tilePos = new Vector3(tilePos.x, 0f, tilePos.z);
-
-            tilesOwned.Add(GameManager.GetFieldPosition(v));
             GameManager.GetFieldPosition(v).IsTrail = false;
         }
         Trail.Clear();
@@ -277,14 +259,10 @@ public class Player : MonoBehaviour
     }
     private void MarkTile(ref Tile t)
     {
-        StealTerrainHandler(t);
-
         t.Owner = this;
         t.IsTrail = false;
         t.tilePos = new Vector3(t.gameObject.transform.position.x, 0f, t.gameObject.transform.position.z);
-        tilesOwned.Add(t);
         t.gameObject.transform.parent = tilesParent;
-
     }
     void FillSmallArea(Vector2Int v)
     {
