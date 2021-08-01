@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class Player : MonoBehaviour
 {
-    //TODO: when trying to fill this players island that is not connected to a wall, the entire field will fill with this color
+    //TODO: when trying to fill this player's island that is not connected to a wall, the entire field will fill with this color.
     // during the flood fill check of both points - check to see if any two points overlap - need to create a list of each flood fill
     // if any two points overlap, stop filling at tile.Owner != this or tile.Owner == null
     #region Member Variables
@@ -124,6 +124,7 @@ public class Player : MonoBehaviour
 
                 Vector3 startTilePos = GameManager.GetFieldPosition(Trail[i]).tilePos;
                 GameManager.GetFieldPosition(Trail[i]).tilePos = new Vector3(startTilePos.x, 0f, startTilePos.z);
+                GameManager.GetFieldPosition(Trail[i]).gameObject.transform.parent = null;
             }
         }
         canFill = false;
@@ -146,6 +147,7 @@ public class Player : MonoBehaviour
 
                 Vector3 trailTilePos = GameManager.GetFieldPosition(other.Trail[i]).tilePos;
                 GameManager.GetFieldPosition(other.Trail[i]).tilePos = new Vector3(trailTilePos.x, 0f, trailTilePos.z);
+                GameManager.GetFieldPosition(other.Trail[i]).gameObject.transform.parent = null;
             }
         }
         other.canFill = false;
@@ -194,6 +196,7 @@ public class Player : MonoBehaviour
             Vector3 tilePos = GameManager.GetFieldPosition(v).tilePos;
             GameManager.GetFieldPosition(v).tilePos = new Vector3(tilePos.x, 0f, tilePos.z);
             GameManager.GetFieldPosition(v).IsTrail = false;
+            GameManager.GetFieldPosition(v).gameObject.transform.parent = null;
         }
         Trail.Clear();
         tileColorsBeforeOwn.Clear();
