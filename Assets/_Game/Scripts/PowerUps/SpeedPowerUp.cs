@@ -2,7 +2,7 @@
 
 public class SpeedPowerUp : MonoBehaviour
 {
-    ParticleSystem speedVFX;
+    [SerializeField] GameObject speedVFX;
     
     float initialSpeed; 
     [SerializeField] float speedMultiplier = 2f;
@@ -17,7 +17,7 @@ public class SpeedPowerUp : MonoBehaviour
 
     void Start()
     {
-        speedVFX = GetComponentInChildren<ParticleSystem>();
+        //speedVFX = GetComponentInChildren<ParticleSystem>();
 
         timer = initialTimer;
         timeUntilDestroy = initialTimer + 2f;
@@ -42,8 +42,11 @@ public class SpeedPowerUp : MonoBehaviour
         if (movement)
         {
             if (speedVFX != null)
+            {
                 speedVFX.transform.parent = other.transform;
-
+                speedVFX.transform.localPosition = new Vector3(0f,0f,1f);
+                Destroy(speedVFX, timeUntilDestroy);
+            }
             speedStarted = true;
 
             gameObject.GetComponent<MeshRenderer>().enabled = false;
