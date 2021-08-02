@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   percent: 0
   tilesParent: {fileID: 0}
+  defaultTilesParent: {fileID: 0}
 --- !u!114 &4289564670628647330
 MonoBehaviour:
   m_ObjectHideFlags: 0
