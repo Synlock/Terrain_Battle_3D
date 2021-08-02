@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     //TODO: when trying to fill this player's island that is not connected to a wall, the entire field will fill with this color.
     // during the flood fill check of both points - check to see if any two points overlap - need to create a list of each flood fill
     // if any two points overlap, stop filling at tile.Owner != this or tile.Owner == null
+
     #region Member Variables
     public Color myColor { get; private set; }
     public float percent;
@@ -18,6 +19,10 @@ public class Player : MonoBehaviour
 
     public Transform tilesParent;
     [SerializeField] Transform defaultTilesParent;
+
+    [SerializeField] ParticleSystem wallCrashFX;
+    [SerializeField] ParticleSystem trailCrashFX;
+    [SerializeField] ParticleSystem powerUpFX;
 
     bool canFill = true;
     bool onMyLand = false;
@@ -59,6 +64,10 @@ public class Player : MonoBehaviour
         {
             canFill = true;
             gridMovement.BlockReverse = false;
+
+            if(wallCrashFX != null)
+                wallCrashFX.Play();
+
             return;
         }
 
@@ -129,6 +138,9 @@ public class Player : MonoBehaviour
         canFill = false;
         Trail.Clear();
         tileColorsBeforeOwn.Clear();
+        
+        if(trailCrashFX != null)
+            trailCrashFX.Play();
     }
     void OtherCollisionHandler(Tile obj)
     {
@@ -152,6 +164,9 @@ public class Player : MonoBehaviour
         other.Trail.Clear();
         other.tileColorsBeforeOwn.Clear();
         other.gridMovement.BlockReverse = false;
+        
+        if(trailCrashFX != null)
+            trailCrashFX.Play();
     }
     void FilledOverMovingHandler()
     {

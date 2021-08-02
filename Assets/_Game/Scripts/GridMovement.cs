@@ -13,8 +13,8 @@ public class GridMovement : MonoBehaviour
         Custom
     }
 
-    [SerializeField] public float timeToMove = 0.2f;
-    [SerializeField] public float distance = 1f;
+    public float timeToMove = 0.2f;
+    public float distance = 1f;
 
     Vector3 originalPos;
     Vector3 targetPos;
