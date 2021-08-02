@@ -49,7 +49,7 @@ public class SpeedPowerUp : MonoBehaviour
 
             initialSpeed = movement.timeToMove;
             movement.timeToMove /= speedMultiplier;
-            Destroy(gameObject, 4f);
+            Destroy(gameObject, timeUntilDestroy);
         }
     }
 }

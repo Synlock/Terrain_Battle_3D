@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(GridMovement))]
 [RequireComponent(typeof(MeshRenderer))]
@@ -24,10 +25,12 @@ public class Player : MonoBehaviour
     [SerializeField] ParticleSystem trailCrashFX;
     [SerializeField] ParticleSystem powerUpFX;
 
+    public Image handle;
+
     bool canFill = true;
     bool onMyLand = false;
 
-    GridMovement gridMovement;
+    [HideInInspector] public GridMovement gridMovement;
     #endregion
 
     #region Unity Methods

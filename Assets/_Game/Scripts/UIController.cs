@@ -4,6 +4,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Player))]
 public class UIController : MonoBehaviour
 {
+    Player[] players;
+
     [SerializeField] Slider percentageSlider;
     [SerializeField] Image fill;
 
@@ -12,6 +14,8 @@ public class UIController : MonoBehaviour
     Player player;
     void Start()
     {
+        players = new Player[] { GameObject.Find("Player").GetComponent<Player>(), GameObject.Find("Enemy").GetComponent<Player>() };
+
         player = GetComponent<Player>();
         percentageSlider.maxValue = 100;
 
@@ -25,6 +29,7 @@ public class UIController : MonoBehaviour
         percentageSlider.value = player.percent;
 
         WinHandler();
+        LeaderImageOnTop();
     }
 
     void WinHandler()
@@ -36,5 +41,11 @@ public class UIController : MonoBehaviour
             if(winPanel != null)
                 winPanel.SetActive(true);
         }
+    }
+    void LeaderImageOnTop()
+    {
+        if(players[0].percent > players[1].percent)
+            players[0].handle.transform.SetAsFirstSibling();
+        else players[1].handle.transform.SetAsFirstSibling();
     }
 }
