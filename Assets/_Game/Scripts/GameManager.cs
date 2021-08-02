@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
     public const int WIDTH = 24;
     public const int HEIGHT = 45;
 
+    public static int percentToWin = 80;
     public static bool isGameOver = false;
 
     public static Tile[,] field = new Tile[WIDTH, HEIGHT];
@@ -29,6 +30,8 @@ public class GameManager : MonoBehaviour
     }
     private void Init()
     {
+        isGameOver = false;
+
         int x_start = 0;
         int z_start = 0;
 

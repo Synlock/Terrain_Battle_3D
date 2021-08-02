@@ -74,7 +74,11 @@ public class GridMovement : MonoBehaviour
 
     void Update()
     {
-        if(GameManager.isGameOver) { return; }
+        if (GameManager.isGameOver) 
+        {
+            joystick.gameObject.SetActive(false);
+            return; 
+        }
 
         Vector3? dir = GetDirection();
         if (dir.HasValue)

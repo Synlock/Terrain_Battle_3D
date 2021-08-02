@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
 
     #region Member Variables
     public Color myColor { get; private set; }
+    [SerializeField] Color[] colorEachLevel = { };
+    Color defaultColor;
+
     public float percent;
 
     List<Vector3> Trail = new List<Vector3>();
@@ -31,22 +34,27 @@ public class Player : MonoBehaviour
     bool onMyLand = false;
 
     [HideInInspector] public GridMovement gridMovement;
+    [HideInInspector] public MeshRenderer meshRenderer;
     #endregion
 
     #region Unity Methods
+    void Awake()
+    {
+        ColorHandler();
+    }
     void Start()
     {
         gridMovement = GetComponent<GridMovement>();
+
         gridMovement.DownBound = 0;
         gridMovement.LeftBound = 0;
         gridMovement.UpBound = GameManager.HEIGHT - 1;
         gridMovement.RightBound = GameManager.WIDTH - 1;
 
-        myColor = GetComponent<MeshRenderer>().material.color;
-
         gridMovement.BeforeStep += BeforeStepHandler;
         gridMovement.AfterStep += AfterStepHandler;
     }
+
     void Update()
     {
         CalculatePercentOfTilesOwned();
@@ -288,6 +296,23 @@ public class Player : MonoBehaviour
         FloodFill<Tile> ff = new FloodFill<Tile>(GameManager.field,
             tile => tile.IsWall || tile.Owner == this, MarkTile);
         ff.Start(v.x, v.y);
+    }
+    #endregion
+    
+    #region Methods
+    private void ColorHandler()
+    {
+        meshRenderer = GetComponent<MeshRenderer>();
+
+        myColor = meshRenderer.material.color;
+        defaultColor = myColor;
+
+        if (colorEachLevel.Length > LoadScenesManager.currentLevel)
+            myColor = colorEachLevel[LoadScenesManager.currentLevel];
+        else
+            myColor = defaultColor;
+
+        meshRenderer.material.color = myColor;
     }
     #endregion
 }
