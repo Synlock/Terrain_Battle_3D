@@ -5,15 +5,19 @@ using System.Linq;
 public class Tile
 {
     public GameObject gameObject;
+    public Player previousOwner;
     private Player _owner;
     public Player Owner
     {
         get => _owner;
         set
         {
+            previousOwner = _owner;
             _owner = value;
             if (_owner != null)
+            {
                 color = _owner.myColor;
+            }
         }
     }
 
@@ -40,6 +44,14 @@ public class Tile
         set
         {
             gameObject.transform.position = value;
+        }
+    }
+    public Transform myParentTransform
+    {
+        get { return gameObject.transform.parent; }
+        set
+        {
+            gameObject.transform.parent = value;
         }
     }
 }
