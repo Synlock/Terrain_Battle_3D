@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     [SerializeField] ParticleSystem trailCrashFX;
     [SerializeField] ParticleSystem powerUpFX;
 
-    public Image handle;
+    public Slider slider;
 
     bool canFill = true;
     bool onMyLand = false;

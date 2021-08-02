@@ -2,7 +2,7 @@
 
 public class SpeedPowerUp : MonoBehaviour
 {
-    [SerializeField] ParticleSystem speedVFX;
+    ParticleSystem speedVFX;
     
     float initialSpeed; 
     [SerializeField] float speedMultiplier = 2f;
@@ -17,6 +17,8 @@ public class SpeedPowerUp : MonoBehaviour
 
     void Start()
     {
+        speedVFX = GetComponentInChildren<ParticleSystem>();
+
         timer = initialTimer;
         timeUntilDestroy = initialTimer + 2f;
     }
@@ -39,8 +41,8 @@ public class SpeedPowerUp : MonoBehaviour
 
         if (movement)
         {
-            if(speedVFX != null)
-                speedVFX.Play();
+            if (speedVFX != null)
+                speedVFX.transform.parent = other.transform;
 
             speedStarted = true;
 

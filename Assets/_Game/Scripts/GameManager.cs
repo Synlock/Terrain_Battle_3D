@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public static Tile[,] field = new Tile[WIDTH, HEIGHT];
 
+    public static Player[] players;
+
     public static int tilesCounter = 0;
     int wallCounter;
 
@@ -20,6 +22,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        //TODO: fix to automatically fill without string
+        players = new Player[] { GameObject.Find("Player").GetComponent<Player>(), GameObject.Find("Enemy").GetComponent<Player>() };
+
         Init();
     }
     private void Init()
