@@ -2,8 +2,8 @@
 
 public class GameManager : MonoBehaviour
 {
-    public const int WIDTH = 28;
-    public const int HEIGHT = 50;
+    public const int WIDTH = 24;
+    public const int HEIGHT = 45;
 
     public static bool isGameOver = false;
 
