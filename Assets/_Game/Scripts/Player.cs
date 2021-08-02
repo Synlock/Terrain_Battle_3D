@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
     List<Vector3> Trail = new List<Vector3>();
     List<Color> tileColorsBeforeOwn = new List<Color>();
 
-    [SerializeField] Transform tilesParent;
+    public Transform tilesParent;
+    [SerializeField] Transform defaultTilesParent;
 
     bool canFill = true;
     bool onMyLand = false;
@@ -70,7 +71,6 @@ public class Player : MonoBehaviour
         obj.Owner = this;
         obj.IsTrail = true;
         obj.tilePos = new Vector3(obj.gameObject.transform.position.x, -1f, obj.gameObject.transform.position.z);
-        obj.gameObject.transform.parent = tilesParent;
 
         Trail.Add(transform.position);
     }
@@ -124,7 +124,6 @@ public class Player : MonoBehaviour
 
                 Vector3 startTilePos = GameManager.GetFieldPosition(Trail[i]).tilePos;
                 GameManager.GetFieldPosition(Trail[i]).tilePos = new Vector3(startTilePos.x, 0f, startTilePos.z);
-                GameManager.GetFieldPosition(Trail[i]).gameObject.transform.parent = null;
             }
         }
         canFill = false;
@@ -147,7 +146,6 @@ public class Player : MonoBehaviour
 
                 Vector3 trailTilePos = GameManager.GetFieldPosition(other.Trail[i]).tilePos;
                 GameManager.GetFieldPosition(other.Trail[i]).tilePos = new Vector3(trailTilePos.x, 0f, trailTilePos.z);
-                GameManager.GetFieldPosition(other.Trail[i]).gameObject.transform.parent = null;
             }
         }
         other.canFill = false;
@@ -196,7 +194,7 @@ public class Player : MonoBehaviour
             Vector3 tilePos = GameManager.GetFieldPosition(v).tilePos;
             GameManager.GetFieldPosition(v).tilePos = new Vector3(tilePos.x, 0f, tilePos.z);
             GameManager.GetFieldPosition(v).IsTrail = false;
-            GameManager.GetFieldPosition(v).gameObject.transform.parent = null;
+            GameManager.GetFieldPosition(v).myParentTransform = tilesParent;
         }
         Trail.Clear();
         tileColorsBeforeOwn.Clear();
