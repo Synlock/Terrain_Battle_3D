@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SpeedPowerUp : MonoBehaviour
+public class SpeedPowerUp : PowerUpsManager
 {
     ParticleSystem speedVFX;
     
@@ -27,9 +27,10 @@ public class SpeedPowerUp : MonoBehaviour
         if(speedStarted)
         {
             timer -= Time.deltaTime;
-            if(timer <= 0f)
+            if (timer <= 0f)
             {
                 gridMovement.timeToMove = initialSpeed;
+                PowerUpsSpawner.isSpawned = false;
             }
         }
     }
@@ -55,6 +56,7 @@ public class SpeedPowerUp : MonoBehaviour
             initialSpeed = movement.timeToMove;
             movement.timeToMove /= speedMultiplier;
             Destroy(gameObject, timeUntilDestroy);
+            //gameObject.SetActive(false);
         }
     }
 }

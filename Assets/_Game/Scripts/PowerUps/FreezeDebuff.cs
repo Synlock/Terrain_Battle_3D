@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FreezeDebuff : MonoBehaviour
-{
+public class FreezeDebuff : PowerUpsManager 
+{ 
     [SerializeField] ParticleSystem speedVFX;
 
     float initialSpeed;

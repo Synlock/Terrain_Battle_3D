@@ -18,11 +18,13 @@ public class GridMovement : MonoBehaviour
 
     Vector3 originalPos;
     Vector3 targetPos;
-    Vector3 lastMove = Vector3.zero;
+    protected Vector3 lastMove = Vector3.zero;
+
+    protected Vector3? dir;
 
     public int moves;
 
-    [SerializeField] public bool BlockReverse = false;
+    public bool BlockReverse = false;
 
     [SerializeField] InputMethod _inputMethod;
     [SerializeField] 
@@ -61,10 +63,17 @@ public class GridMovement : MonoBehaviour
     [SerializeField] public float RightBound = float.PositiveInfinity;
 
 
-    bool isMoving = false;
+    protected bool isMoving = false;
   
     public event EventHandler BeforeStep;
     public event EventHandler AfterStep;
+
+    #region Getters/Setters
+    public EventHandler GetBeforeStep()
+    {
+        return BeforeStep;
+    }
+    #endregion
 
     #region Start/Update
     void Start()
@@ -72,7 +81,7 @@ public class GridMovement : MonoBehaviour
         joystick = FindObjectOfType<FloatingJoystick>();
     }
 
-    void Update()
+    public virtual void Update()
     {
         if (GameManager.isGameOver) 
         {
@@ -80,7 +89,7 @@ public class GridMovement : MonoBehaviour
             return; 
         }
 
-        Vector3? dir = GetDirection();
+        dir = GetDirection();
         if (dir.HasValue)
         {
             BeforeStep?.Invoke(this, null);
@@ -136,7 +145,7 @@ public class GridMovement : MonoBehaviour
         return null;
     }
 
-    IEnumerator MoveObject(Vector3 direction)
+    protected IEnumerator MoveObject(Vector3 direction)
     {
         isMoving = true;
         moves++;

@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
     public Slider slider;
 
-    bool canFill = true;
+    public bool canFill = true;
     bool onMyLand = false;
 
     [HideInInspector] public GridMovement gridMovement;
