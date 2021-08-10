@@ -15,11 +15,11 @@ C:/Users/tomer/OneDrive/Documents/GitHub/Terrain_Battle_3D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53052
+57083
 Successfully changed project path to: C:/Users/tomer/OneDrive/Documents/GitHub/Terrain_Battle_3D
 C:/Users/tomer/OneDrive/Documents/GitHub/Terrain_Battle_3D
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 97.37 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 53.89 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path D:/Unity/Projects/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,1055 +35,211 @@ Initialize mono
 Mono path[0] = 'D:/Unity/Projects/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/Projects/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/Projects/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56912
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56728
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/Projects/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001428 seconds.
+Registered in 0.001700 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 64.31 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 66.03 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.486 seconds
+- Completed reload, in  3.023 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004649 seconds.
+Registered in 0.003580 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.423 seconds
+- Completed reload, in  1.370 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
-Refreshing native plugins compatible for Editor in 1.43 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1316 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 67.0 MB.
-System memory in use after: 67.1 MB.
+Unloading 1317 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 67.1 MB.
+System memory in use after: 46.6 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1760.
-Total: 3.433900 ms (FindLiveObjects: 0.372500 ms CreateObjectMapping: 0.169400 ms MarkObjects: 2.778800 ms  DeleteObjects: 0.111600 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/RPG Monster Duo PBR Polyart/Meshes/TurtleShellMeshPBR.fbx
-  artifactKey: Guid(0d3c605385d6d9547a1e3f24e8248962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Meshes/TurtleShellMeshPBR.fbx using Guid(0d3c605385d6d9547a1e3f24e8248962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e857fe9caf798c8fe39680f0ddb33386') in 0.568483 seconds
-  Import took 0.573273 seconds .
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1761.
+Total: 2.668900 ms (FindLiveObjects: 0.326800 ms CreateObjectMapping: 0.114300 ms MarkObjects: 2.149600 ms  DeleteObjects: 0.076900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000435 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/DefendHit_TurtleShell_Anim.fbx
-  artifactKey: Guid(2c6157875a0088f46bb6a78179983ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/DefendHit_TurtleShell_Anim.fbx using Guid(2c6157875a0088f46bb6a78179983ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '630afa42ba3477f2c366fd69f429394d') in 0.073427 seconds
-  Import took 0.082072 seconds .
+  path: Assets/_Game/Prefabs/GameManager.prefab
+  artifactKey: Guid(c4820171274bb4d4097c5bd914095891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Prefabs/GameManager.prefab using Guid(c4820171274bb4d4097c5bd914095891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ccbe8b48217d21d2f7163034daf3154') in 0.111356 seconds
+  Import took 0.114711 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001107 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkBack_TurtleShell_Anim.fbx
-  artifactKey: Guid(4067e520934750d4c9e5f7fab9cf487f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkBack_TurtleShell_Anim.fbx using Guid(4067e520934750d4c9e5f7fab9cf487f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd87618b66100f6d9acd06a5583abaab3') in 0.064030 seconds
-  Import took 0.071236 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000304 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/IdleNormal_TurtleShell_Anim.fbx
-  artifactKey: Guid(1b1e02561fcbcf64c82b7c02dfb9f53b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/IdleNormal_TurtleShell_Anim.fbx using Guid(1b1e02561fcbcf64c82b7c02dfb9f53b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c2052f93781a70e99cc1e4db05d78a') in 0.061903 seconds
-  Import took 0.071526 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000461 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Dizzy_TurtleShell_Anim.fbx
-  artifactKey: Guid(b8e1da2ff6963da4b8483eeae18b60a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Dizzy_TurtleShell_Anim.fbx using Guid(b8e1da2ff6963da4b8483eeae18b60a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18cb0783188b7ff0ff0445c8401bd5a5') in 0.057196 seconds
-  Import took 0.069050 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000530 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/WalkLeft_Slime_Anim.fbx
-  artifactKey: Guid(89d2cadc7addca64c8849fb4c8d0928d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/WalkLeft_Slime_Anim.fbx using Guid(89d2cadc7addca64c8849fb4c8d0928d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd880e6c30fbcd6136d834618e331779e') in 0.063586 seconds
-  Import took 0.071208 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000434 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Attack01_TurtleShell_Anim.fbx
-  artifactKey: Guid(18d0edd1f2ba4444d9ba9bdf01f251d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Attack01_TurtleShell_Anim.fbx using Guid(18d0edd1f2ba4444d9ba9bdf01f251d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2a15355b18f67a611feb52ca2d725c0') in 0.076691 seconds
-  Import took 0.085308 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000486 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/GetHit_TurtleShell_Anim.fbx
-  artifactKey: Guid(b374e22ebb027494eaf0e15709666b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/GetHit_TurtleShell_Anim.fbx using Guid(b374e22ebb027494eaf0e15709666b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '300ed900bbbbed34c112083e10475fde') in 0.056204 seconds
-  Import took 0.066206 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Walk_Slime_Anim.fbx
-  artifactKey: Guid(f5d4d1a7dadc5a84d910c492d947ca4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Walk_Slime_Anim.fbx using Guid(f5d4d1a7dadc5a84d910c492d947ca4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c1eddf59be4f50d214fb8e04945af92') in 0.090798 seconds
-  Import took 0.098796 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000696 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkRight_TurtleShell_Anim.fbx
-  artifactKey: Guid(66870af258a3ce344ae956c530df9b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkRight_TurtleShell_Anim.fbx using Guid(66870af258a3ce344ae956c530df9b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4da03a5e1a74bfbfdf5954bd36d8faa5') in 0.059812 seconds
-  Import took 0.066690 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000387 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/IdleBattle_TurtleShell_Anim.fbx
-  artifactKey: Guid(e599599913457404aa360071350dd7c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/IdleBattle_TurtleShell_Anim.fbx using Guid(e599599913457404aa360071350dd7c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c754fff6f2c15454400a1afd528ed3a') in 0.053351 seconds
-  Import took 0.059436 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000367 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/IdleNormal_Slime_Anim.fbx
-  artifactKey: Guid(21b5bb1519e484148aa30042c43904c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/IdleNormal_Slime_Anim.fbx using Guid(21b5bb1519e484148aa30042c43904c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b2f13a6e2d05426287b0918a55c26ff') in 0.039006 seconds
-  Import took 0.044111 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000561 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Meshes/StageMesh.fbx
-  artifactKey: Guid(550cdd9b4c76ad645b99cd9eea1bb745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Meshes/StageMesh.fbx using Guid(550cdd9b4c76ad645b99cd9eea1bb745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6275cb5584eb4765a9523a18bdf57bd') in 0.046806 seconds
-  Import took 0.055858 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000533 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Run_Slime_Anim.fbx
-  artifactKey: Guid(dbf4e442d523220489ca9531ab20161f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Run_Slime_Anim.fbx using Guid(dbf4e442d523220489ca9531ab20161f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f567143e443b35685f9da93c98dd718') in 0.055503 seconds
-  Import took 0.063825 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000369 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Attack02_TurtleShell_Anim.fbx
-  artifactKey: Guid(24d275f677a39b245a5e175f24e345a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Attack02_TurtleShell_Anim.fbx using Guid(24d275f677a39b245a5e175f24e345a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5da9596aba6f17409e52c0aeb3451c14') in 0.070119 seconds
-  Import took 0.075273 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000385 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/SenseSomethingStart_Slime_Anim.fbx
-  artifactKey: Guid(81c4fe76ddb8c314087afd9c59b831b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/SenseSomethingStart_Slime_Anim.fbx using Guid(81c4fe76ddb8c314087afd9c59b831b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3047ae80ff6a76aad1953f4088b5ce6') in 0.066256 seconds
-  Import took 0.070654 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000447 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/SenseSomethingRT_TurtleShell_Anim.fbx
-  artifactKey: Guid(ddc2a58dd3a46bc4aae83f0b6792d4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/SenseSomethingRT_TurtleShell_Anim.fbx using Guid(ddc2a58dd3a46bc4aae83f0b6792d4ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6b89ea554759772caa70ce5e4983c2') in 0.070346 seconds
-  Import took 0.080887 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000425 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/SenseSomethingStart_TurtleShell_Anim.fbx
-  artifactKey: Guid(a6c28cf5fd46b9045a05f90be02cf2bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/SenseSomethingStart_TurtleShell_Anim.fbx using Guid(a6c28cf5fd46b9045a05f90be02cf2bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd64abcd454c3f1f39f4aed68ca727d46') in 0.065926 seconds
-  Import took 0.081825 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000739 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/SenseSomethingRoutine_Slime_Anim.fbx
-  artifactKey: Guid(7598b72533d77114287ffbe12e3f9178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/SenseSomethingRoutine_Slime_Anim.fbx using Guid(7598b72533d77114287ffbe12e3f9178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d37d3d336467a6e662baed0cb52f51') in 0.076023 seconds
-  Import took 0.088762 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000879 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkLeft_TurtleShell_Anim.fbx
-  artifactKey: Guid(8f9acbd44d63a84468cb5164f7f9a057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkLeft_TurtleShell_Anim.fbx using Guid(8f9acbd44d63a84468cb5164f7f9a057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d69fd0cd496c8056e580df7fd3713c') in 0.069531 seconds
-  Import took 0.079957 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000626 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Taunt_TurtleShell_Anim.fbx
-  artifactKey: Guid(4bb50d0b13219844eb0abbbf1c15724d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Taunt_TurtleShell_Anim.fbx using Guid(4bb50d0b13219844eb0abbbf1c15724d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43ebf011ec3f3bba60f9107e1a6db42b') in 0.068843 seconds
-  Import took 0.076519 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000426 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/GetHit_Slime_Anim.fbx
-  artifactKey: Guid(a4dd2805a4cbc5b428b746ff8cf375c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/GetHit_Slime_Anim.fbx using Guid(a4dd2805a4cbc5b428b746ff8cf375c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '853110f95fe6f7f582f6cb16a5aac168') in 0.061640 seconds
-  Import took 0.073537 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000573 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Die_TurtleShell_Anim.fbx
-  artifactKey: Guid(d57bb9f35b232f546851ae283a6a4310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Die_TurtleShell_Anim.fbx using Guid(d57bb9f35b232f546851ae283a6a4310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f980b5e890855cc04360abed223d4910') in 0.095700 seconds
-  Import took 0.102698 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000939 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/WalkRight_Slime_Anim.fbx
-  artifactKey: Guid(e701e62680e5836438f67a3da2bdc71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/WalkRight_Slime_Anim.fbx using Guid(e701e62680e5836438f67a3da2bdc71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96629e992e6d8f56867ce5f247f4026c') in 0.050560 seconds
-  Import took 0.063255 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000508 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/IdleBattle_Slime_Anim.fbx
-  artifactKey: Guid(2bfd6fdaf6b23874ca93fca2e578b931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/IdleBattle_Slime_Anim.fbx using Guid(2bfd6fdaf6b23874ca93fca2e578b931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28ccf1bb8c83c6742fc797c32ca2c042') in 0.056520 seconds
-  Import took 0.065243 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000321 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Attack02_Slime_Anim.fbx
-  artifactKey: Guid(8254c95c1caa1da4cb1d22972c413dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Attack02_Slime_Anim.fbx using Guid(8254c95c1caa1da4cb1d22972c413dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe6b35be3ffd463e60c54986273242d4') in 0.043156 seconds
-  Import took 0.052729 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004095 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Walk_TurtleShell_Anim.fbx
-  artifactKey: Guid(769c6c4d31c2dad48b0664b47847f7e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Walk_TurtleShell_Anim.fbx using Guid(769c6c4d31c2dad48b0664b47847f7e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1e5f943ccc392b50679b24e2e8a03e6') in 0.108363 seconds
-  Import took 0.118801 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000736 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/WalkBack_Slime_Anim.fbx
-  artifactKey: Guid(34094b5c4dd5cd9438870be57749bf79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/WalkBack_Slime_Anim.fbx using Guid(34094b5c4dd5cd9438870be57749bf79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1657826285a7b854c6a08d67942cca5d') in 0.056837 seconds
-  Import took 0.065352 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000500 seconds.
-  path: Assets/ToonyTinyPeople/TT_soldiers_Demo/model/TT_Soldiers_Demo.FBX
-  artifactKey: Guid(7b36a186c6950424394704a9292a7114) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ToonyTinyPeople/TT_soldiers_Demo/model/TT_Soldiers_Demo.FBX using Guid(7b36a186c6950424394704a9292a7114) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ade1ab2c8023c8fc2f5e88eb054cda52') in 0.074261 seconds
-  Import took 0.086858 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000309 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Meshes/SlimeMesh.fbx
-  artifactKey: Guid(1f499d0eded7a4245b0c36149a43da4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Meshes/SlimeMesh.fbx using Guid(1f499d0eded7a4245b0c36149a43da4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbda22881a422f2229075d0b2f33c5d2') in 0.060960 seconds
-  Import took 0.067828 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000436 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Meshes/SlimeMeshPBR.fbx
-  artifactKey: Guid(032e9c3d6b8f7bd4281b52741574f3af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Meshes/SlimeMeshPBR.fbx using Guid(032e9c3d6b8f7bd4281b52741574f3af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78951e62df1d8bb2676026b2ebe3730e') in 0.056001 seconds
-  Import took 0.068080 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000709 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Attack01_Slime_Anim.fbx
-  artifactKey: Guid(438236b1bb4dc03468cb3f2d12fa922c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Attack01_Slime_Anim.fbx using Guid(438236b1bb4dc03468cb3f2d12fa922c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8617a04d2b709d012d3eb87dd133a41') in 0.124551 seconds
-  Import took 0.137524 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001207 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Victory_TurtleShell_Anim.fbx
-  artifactKey: Guid(2ce4c828bc03a8f4689ebc72e6dd73bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Victory_TurtleShell_Anim.fbx using Guid(2ce4c828bc03a8f4689ebc72e6dd73bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed45809470016c8d8c0d21919526f61b') in 0.156956 seconds
-  Import took 0.172902 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000697 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Victory_Slime_Anim.fbx
-  artifactKey: Guid(6f262ec4363c1e54baf17c27c26b0bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Victory_Slime_Anim.fbx using Guid(6f262ec4363c1e54baf17c27c26b0bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c498010202ea6db613a72f3fad1db95') in 0.110535 seconds
-  Import took 0.120529 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000707 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Taunt_Slime_Anim.fbx
-  artifactKey: Guid(4633f9c0f50bbb548a176fd4c0f5a0b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Taunt_Slime_Anim.fbx using Guid(4633f9c0f50bbb548a176fd4c0f5a0b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '135ef8efac5b4d43ad175a6ff28e54b4') in 0.075765 seconds
-  Import took 0.085038 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000437 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Meshes/TurtleShellMesh.fbx
-  artifactKey: Guid(56dd4edec19a3b04195448769c085dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Meshes/TurtleShellMesh.fbx using Guid(56dd4edec19a3b04195448769c085dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7e59195dd9916f6504081426388eb04') in 0.109361 seconds
-  Import took 0.117808 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000367 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Dizzy_Slime_Anim.fbx
-  artifactKey: Guid(08a0ee10a8d761e41bf8bc9b832040d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Dizzy_Slime_Anim.fbx using Guid(08a0ee10a8d761e41bf8bc9b832040d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16df76348ddf2880c6abbc821b6f29fd') in 0.086655 seconds
-  Import took 0.096764 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000606 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Defend_TurtleShell_Anim.fbx
-  artifactKey: Guid(eece6c7b0fef3a74cacd7b1169d86d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Defend_TurtleShell_Anim.fbx using Guid(eece6c7b0fef3a74cacd7b1169d86d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '712268757735ffd20e5b72fca876ea2c') in 0.080351 seconds
-  Import took 0.100454 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000555 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Run_TurtleShell_Anim.fbx
-  artifactKey: Guid(7167b0d559da22d439a92af6ec59a2ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Run_TurtleShell_Anim.fbx using Guid(7167b0d559da22d439a92af6ec59a2ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03f80a4dc973cf373a5fb5f1ec5501c8') in 0.111460 seconds
-  Import took 0.122995 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000785 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Die_Slime_Anim.fbx
-  artifactKey: Guid(f76b9b823f2fc9a469d0c2c780514380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animations/Slime/Die_Slime_Anim.fbx using Guid(f76b9b823f2fc9a469d0c2c780514380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '997f34b97d27555b90ba672fa1bbe46d') in 0.081098 seconds
-  Import took 0.089315 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 321.419605 seconds.
-  path: Assets/_Game/Materials/Plane.mat
-  artifactKey: Guid(9a87fae60eaabe9458a8772d0683c83a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/Materials/Plane.mat using Guid(9a87fae60eaabe9458a8772d0683c83a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26be89d4ebba617dab9fd00e5759f4ea') in 0.089952 seconds
-  Import took 0.095518 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000357 seconds.
-  path: Assets/_Game/Materials/Starting Wall.mat
-  artifactKey: Guid(1cca00b09a3144941b416c52fc0f90c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/Materials/Starting Wall.mat using Guid(1cca00b09a3144941b416c52fc0f90c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef9f568535c0a40f9cfa566666180ee') in 0.054741 seconds
-  Import took 0.059847 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000645 seconds.
-  path: Assets/_Game/Materials/Player.mat
-  artifactKey: Guid(37c1985af469c2949ba9495c2dcbe7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/Materials/Player.mat using Guid(37c1985af469c2949ba9495c2dcbe7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '363c7f96cc98640594ee2eca763301a3') in 0.123264 seconds
-  Import took 0.128814 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000301 seconds.
-  path: Assets/_Game/Materials/Sea.mat
-  artifactKey: Guid(ed99174b1fc7b1c40b570499fb829b48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/Materials/Sea.mat using Guid(ed99174b1fc7b1c40b570499fb829b48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ccbaa795b871ca92058cc8c426a872b') in 0.064764 seconds
-  Import took 0.071057 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 52.355589 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart
-  artifactKey: Guid(cbafe139c0b883d4d84deca379bbe378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart using Guid(cbafe139c0b883d4d84deca379bbe378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa37ea8020e4503ea74ab45538a97a5e') in 0.019319 seconds
-  Import took 0.030721 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.061870 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Promotion.jpg
-  artifactKey: Guid(2a5a5f4f146cce3499cfcc7ee45b9b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Promotion.jpg using Guid(2a5a5f4f146cce3499cfcc7ee45b9b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b05b7c5844e5bfeb1282630e72b52db2') in 0.124313 seconds
-  Import took 0.128483 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.436940 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Materials
-  artifactKey: Guid(a9542135e3940dd449ec2cf59b7d110c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Materials using Guid(a9542135e3940dd449ec2cf59b7d110c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c94b716283cccf92378ae7f3d91adc2f') in 0.017325 seconds
-  Import took 0.025483 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.113070 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Materials/PolyartDefault.mat
-  artifactKey: Guid(507d4aa237c275a48b72e5772879be66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Materials/PolyartDefault.mat using Guid(507d4aa237c275a48b72e5772879be66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f76a75ed13f792bc0812dd3d5261988') in 0.040298 seconds
-  Import took 0.044919 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Materials/TurtleShellPBR.mat
-  artifactKey: Guid(b3ad386aba28716448079dcf67d7aede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Materials/TurtleShellPBR.mat using Guid(b3ad386aba28716448079dcf67d7aede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b694ae02af5452d736d5525d059afe1') in 0.050313 seconds
-  Import took 0.055740 seconds .
+  Time since last request: 0.000419 seconds.
+  path: Assets/_Game/Prefabs/Player.prefab
+  artifactKey: Guid(ff2fdb71b3b017d4ab0dcc5ee9445270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Prefabs/Player.prefab using Guid(ff2fdb71b3b017d4ab0dcc5ee9445270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e933907619f577e420fa18c8bcca633') in 0.207727 seconds
+  Import took 0.211178 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000380 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Materials/Stage.mat
-  artifactKey: Guid(19f8a934c4d1c2b47b1d094b83f39fb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Materials/Stage.mat using Guid(19f8a934c4d1c2b47b1d094b83f39fb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ef44be123ce1db49579ae0919679b30') in 0.578595 seconds
-  Import took 0.582719 seconds .
+  path: Assets/_Game/Prefabs/Enemy.prefab
+  artifactKey: Guid(13065b633c1bb604da0c5ffb772589ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Prefabs/Enemy.prefab using Guid(13065b633c1bb604da0c5ffb772589ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83e113c53774daf0212389b5a132013') in 0.035647 seconds
+  Import took 0.042647 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Materials/Skybox_Mat.mat
-  artifactKey: Guid(97f1fc767078c904184a5800339690a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Materials/Skybox_Mat.mat using Guid(97f1fc767078c904184a5800339690a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '283b5db12fb56adb1275860800ceeefc') in 0.037877 seconds
-  Import took 0.042574 seconds .
+  Time since last request: 0.000814 seconds.
+  path: Assets/_Game/Prefabs/Percent Slider Canvas.prefab
+  artifactKey: Guid(fe6fcdd820200d044a4afb55b0e729ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Prefabs/Percent Slider Canvas.prefab using Guid(fe6fcdd820200d044a4afb55b0e729ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd08498ae05a475c1bfb8982141295cc8') in 0.150994 seconds
+  Import took 0.154826 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000591 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Materials/SlimePBR.mat
-  artifactKey: Guid(d357a802e5ef4d44d829d89dfb1a341c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Materials/SlimePBR.mat using Guid(d357a802e5ef4d44d829d89dfb1a341c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9369cafef25e46ac3a440e5e0d0457b') in 0.049248 seconds
-  Import took 0.056281 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 59.797787 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Textures
-  artifactKey: Guid(6840729219228ab4880b45e06d1e3211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Textures using Guid(6840729219228ab4880b45e06d1e3211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9311e276103c2cfd9ccdf291fdb7410') in 0.022900 seconds
-  Import took 0.034688 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.105813 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Textures/PBRSlimeAlbedo.png
-  artifactKey: Guid(0f625c9ed25ed7c479d59c9a7e72177b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Textures/PBRSlimeAlbedo.png using Guid(0f625c9ed25ed7c479d59c9a7e72177b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ec6d51bdd823fd0c14f7085c12a37ad') in 0.039727 seconds
-  Import took 0.044454 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000372 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellAO.png
-  artifactKey: Guid(a469451b6efe62649a2ad1eaf645e7a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellAO.png using Guid(a469451b6efe62649a2ad1eaf645e7a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7183f8b1148607723e9574431744f476') in 0.031514 seconds
-  Import took 0.039056 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002249 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Textures/PolyartDefaultTex.png
-  artifactKey: Guid(19bb4fe4d3f7dc640907e64ce8d1865c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Textures/PolyartDefaultTex.png using Guid(19bb4fe4d3f7dc640907e64ce8d1865c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '673304d1c7d90d4e0bc69e9078ad80e8') in 0.035363 seconds
-  Import took 0.050093 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001013 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Textures/PBRSlimeAO.png
-  artifactKey: Guid(ea614ba314598d14ebe9e9cdff6a47cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Textures/PBRSlimeAO.png using Guid(ea614ba314598d14ebe9e9cdff6a47cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e3cb20398040d15136831f87470840f') in 0.048120 seconds
-  Import took 0.056586 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000508 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellNormal.png
-  artifactKey: Guid(86f7e285a9594474785378ee66ed8b93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellNormal.png using Guid(86f7e285a9594474785378ee66ed8b93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec0fdde7e918369faaee75757bd0660c') in 0.042627 seconds
-  Import took 0.046981 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000376 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellMetalicSmoothness.png
-  artifactKey: Guid(7976e834fdd8a3a43843322f15ca5ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellMetalicSmoothness.png using Guid(7976e834fdd8a3a43843322f15ca5ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0e7c9050f0bd2a9fc9c0d84ed9e0f01') in 0.040477 seconds
-  Import took 0.055706 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000477 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Textures/PBRSlimeNormal.png
-  artifactKey: Guid(18abd5f4e9c11924a95611d5a0813704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Textures/PBRSlimeNormal.png using Guid(18abd5f4e9c11924a95611d5a0813704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3943ef92e5996617b7554b86425a467') in 0.036579 seconds
-  Import took 0.042597 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000328 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellAlbedo.png
-  artifactKey: Guid(8d1af929e130869459814fc6a74e0a3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellAlbedo.png using Guid(8d1af929e130869459814fc6a74e0a3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ff297c7235a07dfc2b4081629ddad99') in 0.054595 seconds
-  Import took 0.072908 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001899 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Textures/PBRSlimeMetallicSmoothness.png
-  artifactKey: Guid(55ceae9efe5bd70448ee58c1d30bb773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Textures/PBRSlimeMetallicSmoothness.png using Guid(55ceae9efe5bd70448ee58c1d30bb773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '028915b00103840d0763843982bab582') in 0.049402 seconds
-  Import took 0.058510 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 110.011851 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animators
-  artifactKey: Guid(af8440f9a15060a4480c02c3ab72ee6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animators using Guid(af8440f9a15060a4480c02c3ab72ee6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '537fd5195251c6701689e65d9d515a8f') in 0.014776 seconds
-  Import took 0.019256 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.339080 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Animators/Slime.controller
-  artifactKey: Guid(fb53b4d3a4f06844c90da7297e9082de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Animators/Slime.controller using Guid(fb53b4d3a4f06844c90da7297e9082de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb1c9a22cd35055f0cfdee2b6435956') in 0.052680 seconds
-  Import took 0.059504 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.958255 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Prefabs
-  artifactKey: Guid(8127742742335384f97472bb26841d4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Prefabs using Guid(8127742742335384f97472bb26841d4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72e223c98d62f9bdd28ea99cee54bcf5') in 0.023329 seconds
-  Import took 0.034169 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.069965 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Prefabs/Slime.prefab
-  artifactKey: Guid(a817c29ea6847604bb2c6c51d9a74bf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Prefabs/Slime.prefab using Guid(a817c29ea6847604bb2c6c51d9a74bf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '275ddc25ff6d92cf08e3a06aef8e29ab') in 0.082846 seconds
-  Import took 0.101485 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000515 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Prefabs/TurtleShellPBR.prefab
-  artifactKey: Guid(38efdaadbfe1d624bbee439cb02e7661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Prefabs/TurtleShellPBR.prefab using Guid(38efdaadbfe1d624bbee439cb02e7661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5641188907c10b95321f817d1cd6062f') in 0.089074 seconds
-  Import took 0.098191 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Prefabs/SlimePBR.prefab
-  artifactKey: Guid(55776efecb0cd134ea5f418c2f97a705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Prefabs/SlimePBR.prefab using Guid(55776efecb0cd134ea5f418c2f97a705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '334d050e00854955858e411504cbb31a') in 0.080855 seconds
-  Import took 0.094587 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000784 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Prefabs/TurtleShell.prefab
-  artifactKey: Guid(3aec22b5d3f3c2947bb81040b56e5f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Prefabs/TurtleShell.prefab using Guid(3aec22b5d3f3c2947bb81040b56e5f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93672e90050e3270daf7e7c0eeef0e2e') in 0.127286 seconds
-  Import took 0.136650 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000893 seconds.
-  path: Assets/RPG Monster Duo PBR Polyart/Prefabs/SlimePBR.prefab
-  artifactKey: Guid(55776efecb0cd134ea5f418c2f97a705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG Monster Duo PBR Polyart/Prefabs/SlimePBR.prefab using Guid(55776efecb0cd134ea5f418c2f97a705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '334d050e00854955858e411504cbb31a') in 0.089760 seconds
-  Import took 0.108218 seconds .
+  Time since last request: 19.019550 seconds.
+  path: Assets/_Game/Animations
+  artifactKey: Guid(0053935d2e0618f4b880f880b729baa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Animations using Guid(0053935d2e0618f4b880f880b729baa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '730eb7a8b219a982803118f263bcb46c') in 0.021344 seconds
+  Import took 0.026257 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004986 seconds.
+Registered in 0.003454 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.11 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.723 seconds
+- Completed reload, in  1.387 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
+Unloading 1290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.2 MB.
+System memory in use after: 68.3 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1811.
-Total: 2.442200 ms (FindLiveObjects: 0.350400 ms CreateObjectMapping: 0.091700 ms MarkObjects: 1.965800 ms  DeleteObjects: 0.032700 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1775.
+Total: 2.366800 ms (FindLiveObjects: 0.549900 ms CreateObjectMapping: 0.119000 ms MarkObjects: 1.669200 ms  DeleteObjects: 0.026700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 160.511105 seconds.
-  path: Assets/_Game/Materials/Enemy.mat
-  artifactKey: Guid(257068007f4952c46a4e8346142275c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/Materials/Enemy.mat using Guid(257068007f4952c46a4e8346142275c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '256537eecd262e91920645594a8057f1') in 0.081100 seconds
-  Import took 0.084676 seconds .
+  Time since last request: 450.015947 seconds.
+  path: Assets/_Game/Scenes/Roy.unity
+  artifactKey: Guid(bc143e04044c5034b83b9a8b3d4d447e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Scenes/Roy.unity using Guid(bc143e04044c5034b83b9a8b3d4d447e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f5a7dfd17293c3aa9527092d7a44bca') in 0.028315 seconds
+  Import took 0.036990 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.024868 seconds.
+Registered in 0.003658 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.663 seconds
+- Completed reload, in  1.293 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.84 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1815.
-Total: 16.465900 ms (FindLiveObjects: 1.355900 ms CreateObjectMapping: 0.290200 ms MarkObjects: 14.713200 ms  DeleteObjects: 0.102200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006550 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.692 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1818.
-Total: 3.884500 ms (FindLiveObjects: 0.665100 ms CreateObjectMapping: 0.128600 ms MarkObjects: 3.063700 ms  DeleteObjects: 0.024100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 386.430848 seconds.
-  path: Assets/Cartoon_Texture_Pack/_MaterialLibrary
-  artifactKey: Guid(2b8bd8c8da4456646b1cb81a54a6ffdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon_Texture_Pack/_MaterialLibrary using Guid(2b8bd8c8da4456646b1cb81a54a6ffdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b47ac40d3c6448f82a71113b19792aac') in 0.019520 seconds
-  Import took 0.023691 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003666 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.615 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.59 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1821.
-Total: 4.714500 ms (FindLiveObjects: 0.793700 ms CreateObjectMapping: 0.256100 ms MarkObjects: 3.573600 ms  DeleteObjects: 0.082900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1045.039468 seconds.
-  path: Assets/JMO Assets/Cartoon FX/CFX2 Prefabs/Blood/CFX2_Blood.prefab
-  artifactKey: Guid(bc98890f6028f444eaa7789bde5e2eeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Cartoon FX/CFX2 Prefabs/Blood/CFX2_Blood.prefab using Guid(bc98890f6028f444eaa7789bde5e2eeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '417bb30e4cd3147ee37427923c086e7d') in 0.058885 seconds
-  Import took 0.065468 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.433759 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8246e3827e2746b230c230adb7afe238') in 0.006247 seconds
-  Import took 0.009747 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003810 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8246e3827e2746b230c230adb7afe238') in 0.006894 seconds
-  Import took 0.010610 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.611213 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5b8de2aaa3d3090242f155f701763b9') in 0.011453 seconds
-  Import took 0.015180 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 38.088106 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bd5d21b31272acf1b46b1d066977240') in 0.010712 seconds
-  Import took 0.014839 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.505722 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5068a817b56954bf3853ca50391f17ee') in 0.008942 seconds
-  Import took 0.014040 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.888497 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a63df118bb8dc9f940bcdf42cfb4f220') in 0.009987 seconds
-  Import took 0.015960 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.128827 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c275349abaac1c505e0f151db649d8ee') in 0.011146 seconds
-  Import took 0.016344 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.760905 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2468d8e82042066968c447313d5d6ef7') in 0.010014 seconds
-  Import took 0.013488 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.955768 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36eb02d8e6ff0e3496da2c0905eee3e2') in 0.009805 seconds
-  Import took 0.014054 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.958417 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627608c11d71108cba1139dc52f269aa') in 0.009761 seconds
-  Import took 0.013223 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.665760 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795c084b616ee1b5e453fd749908e6dc') in 0.009751 seconds
-  Import took 0.013473 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.827066 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7919a9943a48dc8de747a062d1b05b4') in 0.010666 seconds
-  Import took 0.014954 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 168.867036 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca90292e77de7b9d6f86c9eb0fd277b4') in 0.009373 seconds
-  Import took 0.015106 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.971005 seconds.
-  path: Assets/TextMesh Pro/Sprites/EmojiOne.png
-  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40b1d0a80dc1d0c809d6fd03b3068b47') in 0.039194 seconds
-  Import took 0.043480 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.014638 seconds.
-  path: Assets/TextMesh Pro/Sprites/EmojiOne.png
-  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40b1d0a80dc1d0c809d6fd03b3068b47') in 0.013694 seconds
-  Import took 0.017123 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.689557 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34a11f0648f25f5e6ca7ed6313e9b8f7') in 0.010296 seconds
-  Import took 0.014859 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.796812 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2db4f0e42da39e6131d1466fb42ac8f1') in 0.010735 seconds
-  Import took 0.016380 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.399434 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c6cc439888f6fbd3494d682e877350d') in 0.009857 seconds
-  Import took 0.015441 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.962632 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f01eca47672bb7505f32169d8f321ab') in 0.009352 seconds
-  Import took 0.014465 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.442149 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '441d0cd2684c76ec16ffbc1fd30094e3') in 0.008880 seconds
-  Import took 0.012985 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.825376 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e31defe97d6a7017ea9a352049d4b3b5') in 0.009671 seconds
-  Import took 0.013427 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.976416 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cce6cbd1ba9a6ac6678f916429fd293') in 0.009293 seconds
-  Import took 0.012984 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004038 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.412 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1824.
-Total: 4.036800 ms (FindLiveObjects: 0.356500 ms CreateObjectMapping: 0.115300 ms MarkObjects: 3.544200 ms  DeleteObjects: 0.019900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006038 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.127 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1827.
-Total: 4.674400 ms (FindLiveObjects: 0.834600 ms CreateObjectMapping: 0.420300 ms MarkObjects: 3.392800 ms  DeleteObjects: 0.023800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 234.752358 seconds.
-  path: Assets/_Game/VFX/CFX2_Blood.prefab
-  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '869b74bf6e6d9d52c30bedd844515539') in 0.111117 seconds
-  Import took 0.124079 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003742 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.311 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1830.
-Total: 2.125300 ms (FindLiveObjects: 0.205600 ms CreateObjectMapping: 0.048900 ms MarkObjects: 1.850800 ms  DeleteObjects: 0.018300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008840 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.147 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.58 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.4 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1833.
-Total: 6.013000 ms (FindLiveObjects: 0.675600 ms CreateObjectMapping: 0.151200 ms MarkObjects: 5.006900 ms  DeleteObjects: 0.176100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 836.013036 seconds.
-  path: Assets/_Game/Materials/New Material.mat
-  artifactKey: Guid(891a1af6c4bc1314cbdf2373cd512ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/Materials/New Material.mat using Guid(891a1af6c4bc1314cbdf2373cd512ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '314a5ab6bba457097d00026e2b868fae') in 0.119703 seconds
-  Import took 0.126535 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.587297 seconds.
-  path: Assets/_Game/Materials/New Material.mat
-  artifactKey: Guid(891a1af6c4bc1314cbdf2373cd512ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/Materials/New Material.mat using Guid(891a1af6c4bc1314cbdf2373cd512ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0b32fdaf9961d39185509d036b52bae') in 0.020552 seconds
-  Import took 0.026901 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000377 seconds.
-  path: Assets/_Game/Materials/Player 1.mat
-  artifactKey: Guid(6e5e13312fe3867418f99f6790ad173e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/Materials/Player 1.mat using Guid(6e5e13312fe3867418f99f6790ad173e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3d64a248df533801cc85c2693b73f7a') in 0.029638 seconds
-  Import took 0.034721 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007580 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.322 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.5 MB.
+Unloading 1290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.2 MB.
+System memory in use after: 68.3 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1837.
-Total: 8.342800 ms (FindLiveObjects: 1.585700 ms CreateObjectMapping: 0.874900 ms MarkObjects: 5.843900 ms  DeleteObjects: 0.032300 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1778.
+Total: 3.116700 ms (FindLiveObjects: 0.300200 ms CreateObjectMapping: 0.077800 ms MarkObjects: 2.696300 ms  DeleteObjects: 0.025400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003023 seconds.
+Registered in 0.011065 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.196 seconds
+- Completed reload, in  1.659 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.5 MB.
+Unloading 1290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.2 MB.
+System memory in use after: 68.3 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1840.
-Total: 3.854900 ms (FindLiveObjects: 0.578000 ms CreateObjectMapping: 0.161100 ms MarkObjects: 3.081900 ms  DeleteObjects: 0.032300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003560 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.17 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.498 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1289 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.5 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1843.
-Total: 4.838500 ms (FindLiveObjects: 0.437000 ms CreateObjectMapping: 0.319500 ms MarkObjects: 4.046700 ms  DeleteObjects: 0.033500 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1781.
+Total: 6.888600 ms (FindLiveObjects: 1.281700 ms CreateObjectMapping: 0.409100 ms MarkObjects: 5.148400 ms  DeleteObjects: 0.036900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 20302.924616 seconds.
-  path: Assets/_Game/Materials/New Material 1.mat
-  artifactKey: Guid(e0882e1b798d91343a54f61bbd96c610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Game/Materials/New Material 1.mat using Guid(e0882e1b798d91343a54f61bbd96c610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b42f0002310e75379298e3fec34c4c6f') in 0.169164 seconds
-  Import took 0.173886 seconds .
+  Time since last request: 218.969233 seconds.
+  path: Assets/_Game/VFX/CFX2_Blood.prefab
+  artifactKey: Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/VFX/CFX2_Blood.prefab using Guid(cee6785d26d43454b88328409b52b7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a68df91bf293ad767b824f074a94c34') in 0.088584 seconds
+  Import took 0.094641 seconds .
 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/_Game/VFX/Line Impact.prefab
+  artifactKey: Guid(8113e5fd8b6577540bea1b7b2c55c357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/VFX/Line Impact.prefab using Guid(8113e5fd8b6577540bea1b7b2c55c357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72ccb357acaf83ecf009aaee389c68b3') in 0.016794 seconds
+  Import took 0.022704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/_Game/VFX/Terrain Finish.prefab
+  artifactKey: Guid(f839cb2f2afa33c4ba2793ed41b0c466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/VFX/Terrain Finish.prefab using Guid(f839cb2f2afa33c4ba2793ed41b0c466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6916934a65134e476d6352b6e7eb1b36') in 0.033790 seconds
+  Import took 0.044712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.346512 seconds.
+  path: Assets/_Game/Fonts/Answer3DFilled SDF.asset
+  artifactKey: Guid(0e118c104e8924c44aea6a595d0a4626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Fonts/Answer3DFilled SDF.asset using Guid(0e118c104e8924c44aea6a595d0a4626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3710c104ebf0b9a079adfafcd7a36ad') in 0.287168 seconds
+  Import took 0.303831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.107044 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa208cb325200d721fe22e5fac627786') in 0.066784 seconds
+  Import took 0.079321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.098565 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa208cb325200d721fe22e5fac627786') in 0.039257 seconds
+  Import took 0.045591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 395.778877 seconds.
+  path: Assets/_Game/Scripts/GameManager.cs
+  artifactKey: Guid(70e05b48175136d48aa539d281337f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Scripts/GameManager.cs using Guid(70e05b48175136d48aa539d281337f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2562f1d618d923a6be4bacc620675f50') in 0.024821 seconds
+  Import took 0.029236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.059560 seconds.
+  path: Assets/_Game/Scripts/GameManager.cs
+  artifactKey: Guid(70e05b48175136d48aa539d281337f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Scripts/GameManager.cs using Guid(70e05b48175136d48aa539d281337f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2562f1d618d923a6be4bacc620675f50') in 0.011940 seconds
+  Import took 0.022380 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008396 seconds.
+Begin MonoManager ReloadAssembly
