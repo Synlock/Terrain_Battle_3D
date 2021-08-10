@@ -54,6 +54,11 @@ public class Tile
             gameObject.transform.parent = value;
         }
     }
+    public MeshRenderer meshRenderer
+    {
+        get { return gameObject.GetComponent<MeshRenderer>(); }
+        set { meshRenderer = value; }
+    }
 }
 
 public delegate void ActionRef<T>(ref T item);

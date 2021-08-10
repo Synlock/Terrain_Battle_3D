@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     // during the flood fill check of both points - check to see if any two points overlap - need to create a list of each flood fill
     // if any two points overlap, stop filling at tile.Owner != this or tile.Owner == null
 
+    //TODO: when crashing into other trail convert all tiles to owner == this
+
     #region Member Variables
     public Color myColor { get; private set; }
     [SerializeField] Color[] colorEachLevel = { };

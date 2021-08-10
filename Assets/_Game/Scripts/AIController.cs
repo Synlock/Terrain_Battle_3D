@@ -6,7 +6,7 @@ public class AIController : GridMovement
     [SerializeField] float timeUntilChangeDirection = 2f;
     float timer = 0f;
 
-    Vector3 dirToMove;
+    Vector3 dirToMove = Vector3.back;
 
     Player player;
 
@@ -26,6 +26,11 @@ public class AIController : GridMovement
             return;
         }
 
+        HandleDirectionAndMovement();
+    }
+
+    void HandleDirectionAndMovement()
+    {
         dir = AIMovementController();
         if (dir.HasValue)
             dirToMove = dir.Value;
@@ -33,14 +38,28 @@ public class AIController : GridMovement
         if (timer <= 0)
             timer = timeUntilChangeDirection;
 
-        if (GameManager.GetFieldPosition(transform).IsWall)
-            timer = 0f;
+        PreventLeavingGrid();
 
         if (!isMoving)
         {
             GetBeforeStep()?.Invoke(this, null);
             StartCoroutine(MoveObject(dirToMove));
         }
+    }
+
+    void PreventLeavingGrid()
+    {
+        if (dirToMove == lastMove)
+            BlockReverse = true;
+
+        if (GameManager.GetFieldPosition(transform).tilePos.x == RightBound)
+            dirToMove = Vector3.left;
+        else if (GameManager.GetFieldPosition(transform).tilePos.x == 0)
+            dirToMove = Vector3.right;
+        else if (GameManager.GetFieldPosition(transform).tilePos.z == UpBound)
+            dirToMove = Vector3.back;
+        else if (GameManager.GetFieldPosition(transform).tilePos.z == 0)
+            dirToMove = Vector3.forward;
     }
 
     Vector3? AIMovementController()
