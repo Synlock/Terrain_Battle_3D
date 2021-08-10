@@ -68,7 +68,7 @@ public class GridMovement : MonoBehaviour
     public event EventHandler BeforeStep;
     public event EventHandler AfterStep;
 
-    public Animator animator;
+    [HideInInspector] public Animator animator;
 
     #region Getters/Setters
     public EventHandler GetBeforeStep()
