@@ -24,9 +24,12 @@ public class Player : MonoBehaviour
     public Transform tilesParent;
     [SerializeField] Transform defaultTilesParent;
 
+    [Header("FX")]
+    [SerializeField] ParticleSystem trailFX;
     [SerializeField] ParticleSystem wallCrashFX;
     [SerializeField] ParticleSystem trailCrashFX;
     [SerializeField] ParticleSystem powerUpFX;
+
 
     public Slider slider;
 
@@ -45,6 +48,12 @@ public class Player : MonoBehaviour
     void Start()
     {
         gridMovement = GetComponent<GridMovement>();
+
+        if (trailFX != null)
+        {
+            ParticleSystem.MainModule mm = trailFX.main;
+            mm.startColor = meshRenderer.material.color;
+        }
 
         gridMovement.DownBound = 0;
         gridMovement.LeftBound = 0;
@@ -76,8 +85,11 @@ public class Player : MonoBehaviour
             canFill = true;
             gridMovement.BlockReverse = false;
 
-            if(wallCrashFX != null)
+            if (wallCrashFX != null)
+            {
                 wallCrashFX.Play();
+                wallCrashFX.gameObject.SetActive(false);
+            }
 
             return;
         }
@@ -226,6 +238,11 @@ public class Player : MonoBehaviour
         tileColorsBeforeOwn.Clear();
 
         gridMovement.BlockReverse = false;
+
+        if (wallCrashFX != null)
+        {
+            wallCrashFX.gameObject.SetActive(true);
+        }
     }
 
     (Vector2Int, Vector2Int) GetInitialTiles()
