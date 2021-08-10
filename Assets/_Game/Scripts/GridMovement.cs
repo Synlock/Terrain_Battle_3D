@@ -27,7 +27,7 @@ public class GridMovement : MonoBehaviour
     public bool BlockReverse = false;
 
     [SerializeField] InputMethod _inputMethod;
-    [SerializeField] 
+    [SerializeField]
     public InputMethod inputMethod
     {
         get => _inputMethod;
@@ -64,9 +64,11 @@ public class GridMovement : MonoBehaviour
 
 
     protected bool isMoving = false;
-  
+
     public event EventHandler BeforeStep;
     public event EventHandler AfterStep;
+
+    Animator animator;
 
     #region Getters/Setters
     public EventHandler GetBeforeStep()
@@ -79,14 +81,15 @@ public class GridMovement : MonoBehaviour
     void Start()
     {
         joystick = FindObjectOfType<FloatingJoystick>();
+        animator = GetComponent<Animator>();
     }
 
     public virtual void Update()
     {
-        if (GameManager.isGameOver) 
+        if (GameManager.isGameOver)
         {
             joystick.gameObject.SetActive(false);
-            return; 
+            return;
         }
 
         dir = GetDirection();
@@ -109,39 +112,79 @@ public class GridMovement : MonoBehaviour
             if (transform.position.x < RightBound)
                 if (!(BlockReverse && lastMove == Vector3.left))
                     if (joystick.Horizontal > 0.3)
+                    {
+                        animator.SetBool("isMoving", true);
+                        transform.eulerAngles = new Vector3(90f, 90f, 0f);
                         return Vector3.right;
+                    }
+                    else animator.SetBool("isMoving", false);
             if (transform.position.x > LeftBound)
                 if (!(BlockReverse && lastMove == Vector3.right))
                     if (joystick.Horizontal < -0.3)
+                    {
+                        animator.SetBool("isMoving", true);
+                        transform.eulerAngles = new Vector3(90f, 270f, 0f);
                         return Vector3.left;
+                    }
+                    else animator.SetBool("isMoving", false);
             if (transform.position.z < UpBound)
                 if (!(BlockReverse && lastMove == Vector3.back))
                     if (joystick.Vertical > 0.3)
+                    {
+                        animator.SetBool("isMoving", true);
+                        transform.eulerAngles = new Vector3(90f, 0f, 0f);
                         return Vector3.forward;
+                    }
+                    else animator.SetBool("isMoving", false);
             if (transform.position.z > DownBound)
                 if (!(BlockReverse && lastMove == Vector3.forward))
                     if (joystick.Vertical < -0.3)
+                    {
+                        animator.SetBool("isMoving", true);
+                        transform.eulerAngles = new Vector3(90f, 180f, 0f);
                         return Vector3.back;
+                    }
+                    else animator.SetBool("isMoving", false);
             return null;
         }
 
         if (transform.position.x < RightBound)
             if (!(BlockReverse && lastMove == Vector3.left))
                 if (Input.GetKey(Right))
+                {
+                    animator.SetBool("isMoving", true);
+                    transform.eulerAngles = new Vector3(90f, 90f, 0f);
                     return Vector3.right;
+                }
+                else animator.SetBool("isMoving", false);
         if (transform.position.x > LeftBound)
             if (!(BlockReverse && lastMove == Vector3.right))
                 if (Input.GetKey(Left))
+                {
+                    animator.SetBool("isMoving", true);
+                    transform.eulerAngles = new Vector3(90f, 270f, 0f);
                     return Vector3.left;
+                }
+                else animator.SetBool("isMoving", false);
         if (transform.position.z < UpBound)
             if (!(BlockReverse && lastMove == Vector3.back))
                 if (Input.GetKey(Up))
+                {
+                    animator.SetBool("isMoving", true);
+                    transform.eulerAngles = new Vector3(90f, 0f, 0f);
                     return Vector3.forward;
+                }
+                else animator.SetBool("isMoving", false);
         if (transform.position.z > DownBound)
             if (!(BlockReverse && lastMove == Vector3.forward))
                 if (Input.GetKey(Down))
+                {
+                    animator.SetBool("isMoving", true);
+                    transform.eulerAngles = new Vector3(90f, 180f, 0f);
                     return Vector3.back;
 
+                }
+                else animator.SetBool("isMoving", false);
         return null;
     }
 

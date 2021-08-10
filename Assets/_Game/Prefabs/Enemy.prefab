@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4289564670628647329}
   - component: {fileID: 4289564670628647330}
   - component: {fileID: 1144726980}
+  - component: {fileID: 6831370527728316479}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 73966626396640643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14, y: 2, z: 49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73966626396640643}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 1ab743e703eba2f45b6ef065e3d58d1b, type: 3}
 --- !u!23 &832352525566412400
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4b9acc519917cb041a435f05a6960b76, type: 2}
+  - {fileID: 2100000, guid: 257068007f4952c46a4e8346142275c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,8 +98,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.8, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.006458131, y: 0.0058283047, z: 0.0032213507}
+  m_Center: {x: -0.00002264427, y: -0.00013759965, z: 0.0012298828}
 --- !u!54 &3338939637336612855
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,9 +128,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c546d204456b54449a28e592a428ee10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorEachLevel:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
   percent: 0
   tilesParent: {fileID: 0}
   defaultTilesParent: {fileID: 0}
+  wallCrashFX: {fileID: 0}
+  trailCrashFX: {fileID: 0}
+  powerUpFX: {fileID: 0}
+  slider: {fileID: 0}
+  canFill: 1
+  gridMovement: {fileID: 0}
+  meshRenderer: {fileID: 0}
 --- !u!114 &4289564670628647330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,5 +180,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentageSlider: {fileID: 0}
+  text: {fileID: 0}
   fill: {fileID: 0}
   winPanel: {fileID: 0}
+--- !u!95 &6831370527728316479
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73966626396640643}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d68d8141a460d74bb40fd37173bfc03, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

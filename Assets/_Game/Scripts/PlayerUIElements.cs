@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Player))]
 public class PlayerUIElements : MonoBehaviour
 {
     [SerializeField] Slider percentageSlider;
+    [SerializeField] TextMeshProUGUI text;
     [SerializeField] Image fill;
 
     [SerializeField] GameObject winPanel;
@@ -13,19 +15,21 @@ public class PlayerUIElements : MonoBehaviour
     void Start()
     {
         player = GetComponent<Player>();
-        percentageSlider.maxValue = 100;
-
         fill.color = player.myColor;
 
-        percentageSlider.value = player.percent;
+        //percentageSlider.maxValue = 100;
+        //percentageSlider.value = player.percent;
+
+        text.text = player.percent.ToString();
     }
 
     void Update()
     {
-        percentageSlider.value = player.percent;
+        //percentageSlider.value = player.percent;
+        text.text = player.percent.ToString() + "%";
 
         WinHandler();
-        LeaderImageOnTop();
+        //LeaderImageOnTop();
     }
 
     void WinHandler()
