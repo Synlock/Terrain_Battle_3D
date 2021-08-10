@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     // if any two points overlap, stop filling at tile.Owner != this or tile.Owner == null
 
     //TODO: when crashing into other trail convert all tiles to owner == this - possibly complete
-    //TODO: filling over other player while they are on their own land needs to make canFill = false
+    //TODO: filling over other player while they are on their own land and they are moving - need to set their canFill = false
 
     #region Member Variables
     public Color myColor { get; private set; }
