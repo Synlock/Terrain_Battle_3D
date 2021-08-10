@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     // during the flood fill check of both points - check to see if any two points overlap - need to create a list of each flood fill
     // if any two points overlap, stop filling at tile.Owner != this or tile.Owner == null
 
-    //TODO: when crashing into other trail convert all tiles to owner == this
+    //TODO: when crashing into other trail convert all tiles to owner == this - possibly complete
+    //TODO: filling over other player while they are on their own land needs to make canFill = false
 
     #region Member Variables
     public Color myColor { get; private set; }
@@ -171,7 +172,7 @@ public class Player : MonoBehaviour
         foreach (Vector3 v in other.Trail)
         {
             GameManager.GetFieldPosition(v).IsTrail = false;
-            GameManager.GetFieldPosition(v).Owner = null;
+            GameManager.GetFieldPosition(v).Owner = GameManager.GetFieldPosition(v).previousOwner;
             for (int i = 0; i < other.tileColorsBeforeOwn.Count; i++)
             {
                 GameManager.GetFieldPosition(other.Trail[i]).color = other.tileColorsBeforeOwn[i];
