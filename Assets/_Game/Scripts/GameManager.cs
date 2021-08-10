@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject sea;
     [SerializeField] Transform seaParent;
 
-    void Start()
+    void Awake()
     {
         //TODO: fix to automatically fill without string
         players = new Player[] { GameObject.Find("Player").GetComponent<Player>(), GameObject.Find("Enemy").GetComponent<Player>() };

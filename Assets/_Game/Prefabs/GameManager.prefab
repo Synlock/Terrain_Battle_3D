@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8994310427565933827}
   - component: {fileID: 8994310427565933826}
   - component: {fileID: 8994310427565933824}
+  - component: {fileID: 8122851396330461176}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -90,3 +91,42 @@ MonoBehaviour:
   powerUpsToSpawn:
   - {fileID: 4255217005497402597, guid: 0c4850b227de43b4abd0dc868dbc710c, type: 3}
   initialTimer: 10
+--- !u!114 &8122851396330461176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994310427565933839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25eb4f393e666d74f958b5e2e694eec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles:
+  - {x: 1, y: 0, z: 5}
+  - {x: 2, y: 0, z: 5}
+  - {x: 3, y: 0, z: 5}
+  - {x: 4, y: 0, z: 5}
+  - {x: 5, y: 0, z: 5}
+  - {x: 1, y: 0, z: 6}
+  - {x: 2, y: 0, z: 6}
+  - {x: 3, y: 0, z: 6}
+  - {x: 4, y: 0, z: 6}
+  - {x: 5, y: 0, z: 6}
+  - {x: 1, y: 0, z: 7}
+  - {x: 2, y: 0, z: 7}
+  - {x: 3, y: 0, z: 7}
+  - {x: 4, y: 0, z: 7}
+  - {x: 5, y: 0, z: 7}
+  - {x: 1, y: 0, z: 8}
+  - {x: 2, y: 0, z: 8}
+  - {x: 3, y: 0, z: 8}
+  - {x: 4, y: 0, z: 8}
+  - {x: 5, y: 0, z: 8}
+  - {x: 1, y: 0, z: 9}
+  - {x: 2, y: 0, z: 9}
+  - {x: 3, y: 0, z: 9}
+  - {x: 4, y: 0, z: 9}
+  - {x: 5, y: 0, z: 9}
+  obstacleColor: {r: 1, g: 0, b: 0, a: 0}
