@@ -1,19 +1,21 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AIController : GridMovement
 {
     int chosenNumber = 0;
-    [SerializeField] float moveSpeed = 2f;
+    [SerializeField] float timeUntilChangeDirection = 2f;
     float timer = 0f;
+
+    Vector3 dirToMove;
 
     Player player;
 
     void Start()
     {
         player = GetComponent<Player>();
+        animator = GetComponent<Animator>();
 
-        timer = moveSpeed;
+        timer = timeUntilChangeDirection;
     }
 
     public override void Update()
@@ -26,13 +28,21 @@ public class AIController : GridMovement
 
         dir = AIMovementController();
         if (dir.HasValue)
+            dirToMove = dir.Value;
+
+        if (timer <= 0)
+            timer = timeUntilChangeDirection;
+
+        if (GameManager.GetFieldPosition(transform).IsWall)
+            timer = 0f;
+
+        if (!isMoving)
         {
             GetBeforeStep()?.Invoke(this, null);
-            StartCoroutine(MoveObject(dir.Value));
+            StartCoroutine(MoveObject(dirToMove));
         }
-        if (timer <= 0)
-            timer = moveSpeed;
     }
+
     Vector3? AIMovementController()
     {
         int[] chooseRandomDir = { 0, 1, 2, 3 };
@@ -41,13 +51,13 @@ public class AIController : GridMovement
         {
             if (player.canFill)
             {
-                chosenNumber = chooseRandomDir[UnityEngine.Random.Range(0, chooseRandomDir.Length)];
+                chosenNumber = chooseRandomDir[Random.Range(0, chooseRandomDir.Length)];
                 if (chosenNumber == 0)
                 {
                     if (transform.position.x < RightBound)
                         if (!(BlockReverse && lastMove == Vector3.left))
                         {
-                            chosenNumber = chooseRandomDir[UnityEngine.Random.Range(1, chooseRandomDir.Length)];
+                            chosenNumber = chooseRandomDir[Random.Range(1, chooseRandomDir.Length)];
                             return Vector3.right;
                         }
                 }
@@ -68,7 +78,7 @@ public class AIController : GridMovement
                     if (transform.position.z > DownBound)
                         if (!(BlockReverse && lastMove == Vector3.forward))
                         {
-                            chosenNumber = chooseRandomDir[UnityEngine.Random.Range(0, 2)];
+                            chosenNumber = chooseRandomDir[Random.Range(0, 2)];
                             return Vector3.back;
                         }
                 }
@@ -80,6 +90,11 @@ public class AIController : GridMovement
                     if (transform.position.x < RightBound)
                         if (!(BlockReverse && lastMove == Vector3.left))
                             return Vector3.right;
+                }
+                else
+                {
+                    timer = timeUntilChangeDirection;
+                    player.canFill = true;
                 }
             }
         }
