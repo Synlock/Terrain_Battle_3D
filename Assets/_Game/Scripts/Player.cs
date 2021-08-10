@@ -49,11 +49,7 @@ public class Player : MonoBehaviour
     {
         gridMovement = GetComponent<GridMovement>();
 
-        if (trailFX != null)
-        {
-            ParticleSystem.MainModule mm = trailFX.main;
-            mm.startColor = meshRenderer.material.color;
-        }
+        HandleFXOnStart();
 
         gridMovement.DownBound = 0;
         gridMovement.LeftBound = 0;
@@ -67,7 +63,13 @@ public class Player : MonoBehaviour
     void Update()
     {
         CalculatePercentOfTilesOwned();
-        FilledOverNotMovingHandler();        
+        FilledOverNotMovingHandler();
+
+        if (gridMovement.animator.GetBool("isMoving"))
+        {
+            trailFX.gameObject.SetActive(true);
+        }
+        else trailFX.gameObject.SetActive(false);
     }
     #endregion
 
@@ -84,12 +86,6 @@ public class Player : MonoBehaviour
         {
             canFill = true;
             gridMovement.BlockReverse = false;
-
-            if (wallCrashFX != null)
-            {
-                wallCrashFX.Play();
-                wallCrashFX.gameObject.SetActive(false);
-            }
 
             return;
         }
@@ -109,7 +105,6 @@ public class Player : MonoBehaviour
     void AfterStepHandler(object sender, EventArgs e)
     {
         Tile obj = GameManager.GetFieldPosition(transform);
-
 
         if (obj.Owner == this && obj.IsTrail)
             SelfCollisionHandler();
@@ -241,7 +236,7 @@ public class Player : MonoBehaviour
 
         if (wallCrashFX != null)
         {
-            wallCrashFX.gameObject.SetActive(true);
+            wallCrashFX.Play();
         }
     }
 
@@ -317,7 +312,7 @@ public class Player : MonoBehaviour
     #endregion
     
     #region Methods
-    private void ColorHandler()
+    void ColorHandler()
     {
         meshRenderer = GetComponent<MeshRenderer>();
 
@@ -330,6 +325,28 @@ public class Player : MonoBehaviour
             myColor = defaultColor;
 
         meshRenderer.material.color = myColor;
+    }
+    void HandleFXOnStart()
+    {
+        if (trailFX != null)
+        {
+            ParticleSystem.MainModule mm = trailFX.main;
+            mm.startColor = meshRenderer.material.color;
+        }
+        if(wallCrashFX != null)
+        {
+            wallCrashFX.gameObject.SetActive(true);
+
+            ParticleSystem.MainModule mm = wallCrashFX.main;
+            mm.playOnAwake = false;
+        }
+        if (trailCrashFX != null)
+        {
+            trailCrashFX.gameObject.SetActive(true);
+
+            ParticleSystem.MainModule mm = trailCrashFX.main;
+            mm.playOnAwake = false;
+        }
     }
     #endregion
 }

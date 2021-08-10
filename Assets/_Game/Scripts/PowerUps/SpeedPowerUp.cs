@@ -56,6 +56,7 @@ public class SpeedPowerUp : PowerUpsManager
             initialSpeed = movement.timeToMove;
             movement.timeToMove /= speedMultiplier;
             Destroy(gameObject, timeUntilDestroy);
+            Destroy(speedVFX.gameObject, timeUntilDestroy);
             //gameObject.SetActive(false);
         }
     }
