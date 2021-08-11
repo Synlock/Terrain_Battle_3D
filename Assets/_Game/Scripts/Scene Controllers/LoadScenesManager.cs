@@ -10,7 +10,6 @@ public class LoadScenesManager : MonoBehaviour
     void Start()
     {
         maxLevel = SceneManager.sceneCountInBuildSettings - 1;
-
         int checkIndex;
         if (currentLevel <= maxLevel)
             checkIndex = currentLevel;
@@ -53,7 +52,7 @@ public class LoadScenesManager : MonoBehaviour
         {
             SceneManager.LoadScene(currentLevel);
         }
-        else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        else SceneManager.LoadScene(maxLevel);
 
         PlayerPrefs.SetInt("Current Level", currentLevel);
 

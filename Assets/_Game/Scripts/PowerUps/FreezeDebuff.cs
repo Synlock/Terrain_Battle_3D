@@ -29,6 +29,7 @@ public class FreezeDebuff : PowerUpsManager
             if (timer <= 0f)
             {
                 gridMovement.timeToMove = initialSpeed;
+                PowerUpsSpawner.isSpawned = false;
             }
         }
     }
