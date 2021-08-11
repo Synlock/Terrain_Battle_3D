@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FreezeDebuff : PowerUpsManager 
 { 
-    [SerializeField] ParticleSystem speedVFX;
+    [SerializeField] ParticleSystem freezeVFX;
 
     float initialSpeed;
 
@@ -51,8 +51,11 @@ public class FreezeDebuff : PowerUpsManager
         GridMovement movement = player.gridMovement;
         gridMovement = movement;
 
-        if (speedVFX != null)
-            speedVFX.Play();
+        if (freezeVFX != null)
+        {
+            freezeVFX.Play();
+            freezeVFX.gameObject.transform.position = player.transform.position;
+        }
 
         freezeStarted = true;
 
