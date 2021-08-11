@@ -54,7 +54,8 @@ public class FreezeDebuff : PowerUpsManager
         if (freezeVFX != null)
         {
             freezeVFX.Play();
-            freezeVFX.gameObject.transform.position = player.transform.position;
+            freezeVFX.gameObject.transform.parent = player.transform;
+            freezeVFX.gameObject.transform.localPosition = Vector3.zero;
         }
 
         freezeStarted = true;
