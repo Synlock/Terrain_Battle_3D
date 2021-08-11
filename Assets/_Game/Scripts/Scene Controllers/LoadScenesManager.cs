@@ -5,12 +5,20 @@ using UnityEngine.SceneManagement;
 public class LoadScenesManager : MonoBehaviour
 {
     public static int currentLevel = 1;
+    int maxLevel;
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0 && !SceneManager.GetSceneByBuildIndex(currentLevel).isLoaded)
+        maxLevel = SceneManager.sceneCountInBuildSettings - 1;
+
+        int checkIndex;
+        if (currentLevel <= maxLevel)
+            checkIndex = currentLevel;
+        else checkIndex = maxLevel;
+
+        if (SceneManager.GetActiveScene().buildIndex == 0 && !SceneManager.GetSceneByBuildIndex(checkIndex).isLoaded)
         {
-            if(PlayerPrefs.GetInt("Current Level") == 0)
+            if (PlayerPrefs.GetInt("Current Level") == 0)
             {
                 currentLevel = 1;
             }
@@ -21,9 +29,19 @@ public class LoadScenesManager : MonoBehaviour
     }
     IEnumerator StartGame()
     {
-        SceneManager.LoadScene(currentLevel, LoadSceneMode.Additive);
-        yield return new WaitForSeconds(0.01f);
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(currentLevel));
+        if (currentLevel <= maxLevel)
+        {
+            SceneManager.LoadScene(currentLevel, LoadSceneMode.Additive);
+            yield return new WaitForSeconds(0.01f);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(currentLevel));
+        }
+        else
+        {
+            SceneManager.LoadScene(maxLevel, LoadSceneMode.Additive);
+            yield return new WaitForSeconds(0.01f);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(maxLevel));
+        }
+
     }
     public void LoadNextScene()
     {
@@ -31,9 +49,11 @@ public class LoadScenesManager : MonoBehaviour
         Time.timeScale = 1f;
 
         currentLevel++;
-        if (currentLevel < 2)
-            SceneManager.LoadScene(currentLevel + 1);
-        else SceneManager.LoadScene(currentLevel);
+        if (currentLevel < maxLevel)
+        {
+            SceneManager.LoadScene(currentLevel);
+        }
+        else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         PlayerPrefs.SetInt("Current Level", currentLevel);
 

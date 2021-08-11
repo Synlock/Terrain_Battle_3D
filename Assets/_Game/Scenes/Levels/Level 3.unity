@@ -14955,6 +14955,14 @@ PrefabInstance:
       propertyPath: levelText
       value: 
       objectReference: {fileID: 1153478116}
+    - target: {fileID: 8994310427565933836, guid: c4820171274bb4d4097c5bd914095891, type: 3}
+      propertyPath: seaParent
+      value: 
+      objectReference: {fileID: 62426467}
+    - target: {fileID: 8994310427565933836, guid: c4820171274bb4d4097c5bd914095891, type: 3}
+      propertyPath: wallParent
+      value: 
+      objectReference: {fileID: 1795414445}
     - target: {fileID: 8994310427565933837, guid: c4820171274bb4d4097c5bd914095891, type: 3}
       propertyPath: m_RootOrder
       value: 8
