@@ -20,7 +20,7 @@ public class AIController : GridMovement
 
     public override void Update()
     {
-        if (GameManager.isGameOver)
+        if (GameManager.isGameOver || !GameManager.hasGameStarted)
         {
             isMoving = false;
             return;

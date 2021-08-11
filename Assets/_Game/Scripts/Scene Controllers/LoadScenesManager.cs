@@ -9,17 +9,24 @@ public class LoadScenesManager : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+        GameManager.hasGameStarted = false;
         Time.timeScale = 1f;
 
         currentLevel++;
-        SceneManager.LoadScene(currentSceneIndex);
+        if (currentSceneIndex < 2)
+            SceneManager.LoadScene(currentSceneIndex + 1);
+        else SceneManager.LoadScene(currentSceneIndex);
+
+        SceneManager.LoadScene("Main Menu", LoadSceneMode.Additive);
     }
     public void ReloadScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+        GameManager.hasGameStarted = false;
         Time.timeScale = 1f;
 
         SceneManager.LoadScene(currentSceneIndex);
+        SceneManager.LoadScene("Main Menu", LoadSceneMode.Additive);
     }
 }

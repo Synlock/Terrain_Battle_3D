@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     public static int percentToWin = 80;
     public static bool isGameOver = false;
+    public static bool hasGameStarted = false;
 
     public static Tile[,] field = new Tile[WIDTH, HEIGHT];
 

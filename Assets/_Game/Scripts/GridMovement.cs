@@ -86,7 +86,7 @@ public class GridMovement : MonoBehaviour
 
     public virtual void Update()
     {
-        if (GameManager.isGameOver)
+        if (GameManager.isGameOver || !GameManager.hasGameStarted)
         {
             joystick.gameObject.SetActive(false);
             return;
