@@ -90,7 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpsToSpawn:
   - {fileID: 4255217005497402597, guid: 0c4850b227de43b4abd0dc868dbc710c, type: 3}
-  initialTimer: 10
+  - {fileID: 7218437678122003175, guid: fe614bf6839807c4a9e6d785acd8ddfc, type: 3}
+  initialTimer: 5
 --- !u!114 &8122851396330461176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,4 +130,4 @@ MonoBehaviour:
   - {x: 3, y: 0, z: 9}
   - {x: 4, y: 0, z: 9}
   - {x: 5, y: 0, z: 9}
-  obstacleColor: {r: 1, g: 0, b: 0, a: 0}
+  obstacleMat: {fileID: 0}

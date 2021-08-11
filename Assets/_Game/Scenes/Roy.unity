@@ -8873,7 +8873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1338665272
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14754,6 +14754,18 @@ PrefabInstance:
       propertyPath: tiles.Array.data[99].z
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 8994310427565933824, guid: c4820171274bb4d4097c5bd914095891, type: 3}
+      propertyPath: initialTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994310427565933824, guid: c4820171274bb4d4097c5bd914095891, type: 3}
+      propertyPath: powerUpsToSpawn.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994310427565933824, guid: c4820171274bb4d4097c5bd914095891, type: 3}
+      propertyPath: powerUpsToSpawn.Array.data[1]
+      value: 
+      objectReference: {fileID: 7218437678122003175, guid: fe614bf6839807c4a9e6d785acd8ddfc, type: 3}
     - target: {fileID: 8994310427565933827, guid: c4820171274bb4d4097c5bd914095891, type: 3}
       propertyPath: levelText
       value: 
