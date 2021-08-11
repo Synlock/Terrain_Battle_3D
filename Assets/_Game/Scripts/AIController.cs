@@ -53,13 +53,29 @@ public class AIController : GridMovement
             BlockReverse = true;
 
         if (GameManager.GetFieldPosition(transform).tilePos.x == RightBound)
+        {
+            transform.eulerAngles = new Vector3(90f, 270f, 0f);
+            animator.SetBool("isMoving", true);
             dirToMove = Vector3.left;
+        }
         else if (GameManager.GetFieldPosition(transform).tilePos.x == 0)
+        {
+            transform.eulerAngles = new Vector3(90f, 90f, 0f);
+            animator.SetBool("isMoving", true);
             dirToMove = Vector3.right;
+        }
         else if (GameManager.GetFieldPosition(transform).tilePos.z == UpBound)
+        {
+            transform.eulerAngles = new Vector3(90f, 180f, 0f);
+            animator.SetBool("isMoving", true);
             dirToMove = Vector3.back;
+        }
         else if (GameManager.GetFieldPosition(transform).tilePos.z == 0)
+        {
+            transform.eulerAngles = new Vector3(90f, 0f, 0f);
+            animator.SetBool("isMoving", true);
             dirToMove = Vector3.forward;
+        }
     }
 
     Vector3? AIMovementController()
@@ -77,20 +93,33 @@ public class AIController : GridMovement
                         if (!(BlockReverse && lastMove == Vector3.left))
                         {
                             chosenNumber = chooseRandomDir[Random.Range(1, chooseRandomDir.Length)];
+                            transform.eulerAngles = new Vector3(90f, 90f, 0f);
+                            animator.SetBool("isMoving", true);
                             return Vector3.right;
                         }
+                    else animator.SetBool("isMoving", false);
                 }
                 else if (chosenNumber == 1)
                 {
                     if (transform.position.x > LeftBound)
                         if (!(BlockReverse && lastMove == Vector3.right))
+                        {
+                            animator.SetBool("isMoving", true);
+                            transform.eulerAngles = new Vector3(90f, 270f, 0f);
                             return Vector3.left;
+                        }
+                    else animator.SetBool("isMoving", false);
                 }
                 else if (chosenNumber == 2)
                 {
                     if (transform.position.z < UpBound)
                         if (!(BlockReverse && lastMove == Vector3.back))
+                        {
+                            animator.SetBool("isMoving", true);
+                            transform.eulerAngles = new Vector3(90f, 0f, 0f);
                             return Vector3.forward;
+                        }
+                    else animator.SetBool("isMoving", false);
                 }
                 else
                 {
@@ -98,8 +127,11 @@ public class AIController : GridMovement
                         if (!(BlockReverse && lastMove == Vector3.forward))
                         {
                             chosenNumber = chooseRandomDir[Random.Range(0, 2)];
+                            animator.SetBool("isMoving", true);
+                            transform.eulerAngles = new Vector3(90f, 180f, 0f);
                             return Vector3.back;
                         }
+                    else animator.SetBool("isMoving", false);
                 }
             }
             else
@@ -108,7 +140,11 @@ public class AIController : GridMovement
                 {
                     if (transform.position.x < RightBound)
                         if (!(BlockReverse && lastMove == Vector3.left))
+                        {
+                            animator.SetBool("isMoving", true);
                             return Vector3.right;
+                        }
+                        else animator.SetBool("isMoving", false);
                 }
                 else
                 {
