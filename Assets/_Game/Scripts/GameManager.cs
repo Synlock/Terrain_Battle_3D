@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour
 
         Init();
     }
+    void Start()
+    {
+        wallParent = GameObject.Find("Wall Parent").transform;    
+        seaParent = GameObject.Find("Sea Parent").transform;    
+    }
     private void Init()
     {
         isGameOver = false;

@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d63fee54e8fa34680393ede4414f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedVFX: {fileID: 5287581053983314538}
+  freezeVFX: {fileID: 5287581053983314538}
   initialTimer: 2
 --- !u!65 &6139177146542129713
 BoxCollider:
