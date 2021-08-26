@@ -598,3 +598,80 @@ System memory in use after: 68.9 MB.
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1835.
 Total: 2.569300 ms (FindLiveObjects: 0.290500 ms CreateObjectMapping: 0.073000 ms MarkObjects: 2.174300 ms  DeleteObjects: 0.028800 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004266 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.239 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1292 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.8 MB.
+System memory in use after: 68.9 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1838.
+Total: 3.144700 ms (FindLiveObjects: 0.620400 ms CreateObjectMapping: 0.094500 ms MarkObjects: 2.343000 ms  DeleteObjects: 0.085700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 411.958247 seconds.
+  path: Assets/_Game/Prefabs/Snowflake.prefab
+  artifactKey: Guid(fe614bf6839807c4a9e6d785acd8ddfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Prefabs/Snowflake.prefab using Guid(fe614bf6839807c4a9e6d785acd8ddfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c95e5e46660667cf672972a0ed64f230') in 0.075319 seconds
+  Import took 0.078967 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.274763 seconds.
+  path: Assets/_Game/Prefabs/Snowflake.prefab
+  artifactKey: Guid(fe614bf6839807c4a9e6d785acd8ddfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Game/Prefabs/Snowflake.prefab using Guid(fe614bf6839807c4a9e6d785acd8ddfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c95e5e46660667cf672972a0ed64f230') in 0.030772 seconds
+  Import took 0.035257 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006131 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.834 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1292 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.8 MB.
+System memory in use after: 68.9 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1842.
+Total: 3.334000 ms (FindLiveObjects: 0.253200 ms CreateObjectMapping: 0.117000 ms MarkObjects: 2.930300 ms  DeleteObjects: 0.031500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003783 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.039 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1292 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.8 MB.
+System memory in use after: 68.9 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1845.
+Total: 2.488200 ms (FindLiveObjects: 0.367600 ms CreateObjectMapping: 0.102800 ms MarkObjects: 1.955700 ms  DeleteObjects: 0.060200 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
