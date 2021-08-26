@@ -63,7 +63,12 @@ public class LoadScenesManager : MonoBehaviour
         GameManager.hasGameStarted = false;
         Time.timeScale = 1f;
 
-        SceneManager.LoadScene(currentLevel);
+        if (currentLevel < maxLevel)
+        {
+            SceneManager.LoadScene(currentLevel);
+        }
+        else SceneManager.LoadScene(maxLevel);
+
         SceneManager.LoadScene("Main Menu", LoadSceneMode.Additive);
     }
 }

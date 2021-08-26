@@ -67,5 +67,6 @@ public class FreezeDebuff : PowerUpsManager
         initialSpeed = gridMovement.timeToMove;
         player.gridMovement.timeToMove = 1f;
         Destroy(gameObject, timeUntilDestroy);
+        Destroy(freezeVFX.gameObject, initialTimer);
     }
 }

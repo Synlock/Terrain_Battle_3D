@@ -2892,7 +2892,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!223 &434207086
 Canvas:
   m_ObjectHideFlags: 0
@@ -4437,7 +4436,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &705507995
@@ -13469,7 +13467,7 @@ LightingSettings:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Settings.lighting
-  serializedVersion: 3
+  serializedVersion: 2
   m_GIWorkflowMode: 1
   m_EnableBakedLightmaps: 0
   m_EnableRealtimeLightmaps: 1
@@ -13508,7 +13506,7 @@ LightingSettings:
   m_PVREnvironmentReferencePointCount: 2048
   m_LightProbeSampleCountMultiplier: 4
   m_PVRBounces: 2
-  m_PVRMinBounces: 1
+  m_PVRRussianRouletteStartBounce: 2
   m_PVREnvironmentMIS: 0
   m_PVRFilteringMode: 2
   m_PVRDenoiserTypeDirect: 0
@@ -14474,6 +14472,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4820171274bb4d4097c5bd914095891, type: 3}
+--- !u!114 &1991210062 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8994310427565933826, guid: c4820171274bb4d4097c5bd914095891, type: 3}
+  m_PrefabInstance: {fileID: 1991210061}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9785a27528bbc1b489048cb445b25804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1992771148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15972,6 +15981,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1562372000}
     m_Modifications:
+    - target: {fileID: 879113311, guid: fe6fcdd820200d044a4afb55b0e729ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1991210062}
+    - target: {fileID: 879113311, guid: fe6fcdd820200d044a4afb55b0e729ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775430993, guid: fe6fcdd820200d044a4afb55b0e729ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1991210062}
+    - target: {fileID: 1775430993, guid: fe6fcdd820200d044a4afb55b0e729ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextScene
+      objectReference: {fileID: 0}
     - target: {fileID: 6937555571172686842, guid: fe6fcdd820200d044a4afb55b0e729ca, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
