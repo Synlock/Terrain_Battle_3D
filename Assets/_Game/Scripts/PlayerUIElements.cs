@@ -17,16 +17,16 @@ public class PlayerUIElements : MonoBehaviour
         player = GetComponent<Player>();
         fill.color = player.myColor;
 
-        //percentageSlider.maxValue = 100;
-        //percentageSlider.value = player.percent;
+        percentageSlider.maxValue = 100;
+        percentageSlider.value = player.percent;
 
-        text.text = player.percent.ToString();
+        //text.text = player.percent.ToString();
     }
 
     void Update()
     {
-        //percentageSlider.value = player.percent;
-        text.text = player.percent.ToString() + "%";
+        percentageSlider.value = player.percent;
+        //text.text = player.percent.ToString() + "%";
 
         WinHandler();
         //LeaderImageOnTop();

@@ -54,6 +54,9 @@ public class Player : MonoBehaviour
 
         HandleFXOnStart();
 
+        var mm = trailCrashFX.main;
+        mm.startColor = meshRenderer.material.color;
+
         gridMovement.DownBound = 0;
         gridMovement.LeftBound = 0;
         gridMovement.UpBound = GameManager.HEIGHT - 1;
@@ -161,7 +164,10 @@ public class Player : MonoBehaviour
         tileColorsBeforeOwn.Clear();
         
         if(trailCrashFX != null)
-            trailCrashFX.Play();
+        {
+            
+            trailCrashFX.Play(); 
+        }
     }
     void OtherCollisionHandler(Tile obj)
     {

@@ -38,7 +38,7 @@ public class FreezeDebuff : PowerUpsManager
     {
         //bug that if hit while sped up will permenantly be sped up
         //temporary solution for only 2 players - TODO: need to add a feature that automatically detects all players in map and make the player in element 0
-        if (GameManager.players[0])
+        if (other.gameObject == GameManager.players[0].gameObject)
         {
             FreezeController(GameManager.players[1]);
         }
