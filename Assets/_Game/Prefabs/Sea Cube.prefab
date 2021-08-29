@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 684935332624594174}
   - component: {fileID: 1915357301322769809}
   - component: {fileID: 5278488036472028469}
+  - component: {fileID: 407907894435987661}
   m_Layer: 0
   m_Name: Sea Cube
   m_TagString: Sea
@@ -95,3 +96,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 5, z: 1}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &407907894435987661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327544934221595684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e157eb57fddedbf4ba2dd7409642baa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 1
+  rotationSpeed: 20

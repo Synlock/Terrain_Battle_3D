@@ -10,6 +10,8 @@ public class ObstacleController : MonoBehaviour
     void Start()
     {
         SetObstaclesOnStart();
+
+        GameManager.tilesCounter -= tiles.Length;
     }
     
     void SetObstaclesOnStart()
@@ -21,6 +23,9 @@ public class ObstacleController : MonoBehaviour
 
             Vector3 pos = GameManager.GetFieldPosition(tilePos).tilePos;
             GameManager.GetFieldPosition(tilePos).tilePos = new Vector3(pos.x, 1f, pos.z);
+
+            Destroy(GameManager.GetFieldPosition(tilePos).gameObject.GetComponent<EndingRotator>());
+
         }
     }
 }
