@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4289564670628647329}
   - component: {fileID: 1144726980}
   - component: {fileID: 6831370527728316479}
-  - component: {fileID: 3143031182044488253}
+  - component: {fileID: 2180453340149837026}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -171,7 +171,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3143031182044488253
+--- !u!114 &2180453340149837026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,23 +180,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 73966626396640643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71d9d6416e7a3f649ba7104f29586896, type: 3}
+  m_Script: {fileID: 11500000, guid: 67e01904442521244a578faed644c7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToMove: 0.08
   distance: 1
   moves: 0
   BlockReverse: 0
-  _inputMethod: 1
-  Up: 119
-  Down: 115
-  Left: 97
-  Right: 100
+  _inputMethod: 0
+  Up: 0
+  Down: 0
+  Left: 0
+  Right: 0
   UpBound: Infinity
   DownBound: -Infinity
   LeftBound: -Infinity
   RightBound: Infinity
   animator: {fileID: 0}
+  timeUntilChangeDirection: 2
 --- !u!1 &7896509114016835319
 GameObject:
   m_ObjectHideFlags: 0

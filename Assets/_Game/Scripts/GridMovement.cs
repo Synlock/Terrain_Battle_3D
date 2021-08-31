@@ -86,11 +86,12 @@ public class GridMovement : MonoBehaviour
 
     public virtual void Update()
     {
-        if (GameManager.isGameOver) //|| !GameManager.hasGameStarted)
+        if (GameManager.isGameOver || !GameManager.hasGameStarted)
         {
             joystick.gameObject.SetActive(false);
             return;
         }
+        else joystick.gameObject.SetActive(true);
 
         dir = GetDirection();
         if (dir.HasValue)

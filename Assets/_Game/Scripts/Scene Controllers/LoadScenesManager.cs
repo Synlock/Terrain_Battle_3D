@@ -22,25 +22,23 @@ public class LoadScenesManager : MonoBehaviour
                 currentLevel = 1;
             }
             else currentLevel = PlayerPrefs.GetInt("Current Level");
-
-            StartCoroutine(StartGame());
+            
+            StartGame();
         }
     }
-    IEnumerator StartGame()
+    private void StartGame()
     {
         if (currentLevel <= maxLevel)
         {
-            SceneManager.LoadScene(currentLevel, LoadSceneMode.Additive);
-            yield return new WaitForSeconds(0.01f);
-            SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(currentLevel));
+            SceneManager.LoadSceneAsync(currentLevel);
+            SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive);
         }
         else
         {
-            SceneManager.LoadScene(maxLevel, LoadSceneMode.Additive);
-            yield return new WaitForSeconds(0.01f);
-            SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(maxLevel));
+            int randomLevel = Random.Range(1, maxLevel + 1);
+            SceneManager.LoadSceneAsync(randomLevel);
+            SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive);
         }
-
     }
     public void LoadNextScene()
     {
@@ -52,7 +50,7 @@ public class LoadScenesManager : MonoBehaviour
         {
             SceneManager.LoadScene(currentLevel);
         }
-        else SceneManager.LoadScene(maxLevel);
+        else SceneManager.LoadScene(Random.Range(1, maxLevel + 1));
 
         PlayerPrefs.SetInt("Current Level", currentLevel);
 
@@ -63,12 +61,13 @@ public class LoadScenesManager : MonoBehaviour
         GameManager.hasGameStarted = false;
         Time.timeScale = 1f;
 
-        if (currentLevel < maxLevel)
-        {
-            SceneManager.LoadScene(currentLevel);
-        }
-        else SceneManager.LoadScene(maxLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         SceneManager.LoadScene("Main Menu", LoadSceneMode.Additive);
+    }
+    public void UnloadScene()
+    {
+        GameManager.hasGameStarted = true;
+        SceneManager.UnloadSceneAsync("Main Menu");
     }
 }

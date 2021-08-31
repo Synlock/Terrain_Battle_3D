@@ -13,6 +13,7 @@ public class PowerUpsSpawner : MonoBehaviour
 
     void Start()
     {
+        isSpawned = false;
         timer = initialTimer;
     }
     void Update()

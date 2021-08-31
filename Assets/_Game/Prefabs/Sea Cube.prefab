@@ -109,4 +109,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 1
-  rotationSpeed: 20
+  rotationSpeed: 75

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(GridMovement))]
+/*[CustomEditor(typeof(GridMovement))]
 public class GridMovementEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         EditorUtility.SetDirty(target);
 
-        var gm = target as GridMovement;
+        GridMovement gm = target as GridMovement;
 
         gm.timeToMove = EditorGUILayout.FloatField("Time To Move", gm.timeToMove);
         gm.distance = EditorGUILayout.FloatField("Distance", gm.distance);
@@ -36,4 +36,4 @@ public class GridMovementEditor : Editor
         }
 
     }
-}
+}*/

@@ -233,7 +233,7 @@ MonoBehaviour:
   distance: 1
   moves: 0
   BlockReverse: 0
-  _inputMethod: 0
+  _inputMethod: 2
   Up: 273
   Down: 274
   Left: 276
